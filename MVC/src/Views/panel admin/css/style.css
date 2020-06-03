@@ -1,0 +1,284 @@
+body {
+        color: #566787;
+		background: #f5f5f5;
+		font-family: 'Varela Round', sans-serif;
+		font-size: 13px;
+	}
+	.table-wrapper {
+        background: #fff;
+        padding: 20px 25px;
+        margin: 30px 0;
+		border-radius: 3px;
+        box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    }
+	.table-title {
+		padding-bottom: 15px;
+		background: #0b7358;
+		color: #fff;
+		padding: 16px 30px;
+		margin: -20px -25px 10px;
+		border-radius: 3px 3px 0 0;
+    }
+    .table-title h2 {
+		margin: 5px 0 0;
+		font-size: 24px;
+	}
+	.table-title .btn {
+		color: #566787;
+		float: right;
+		font-size: 13px;
+		background: #fff;
+		border: none;
+		min-width: 50px;
+		border-radius: 2px;
+		border: none;
+		outline: none !important;
+		margin-left: 10px;
+	}
+	.table-title .btn:hover, .table-title .btn:focus {
+        color: #566787;
+		background: #f2f2f2;
+	}
+	.table-title .btn i {
+		float: left;
+		font-size: 21px;
+		margin-right: 5px;
+	}
+	.table-title .btn span {
+		float: left;
+		margin-top: 2px;
+	}
+    table.table tr th, table.table tr td {
+        border-color: #e9e9e9;
+		padding: 12px 15px;
+		vertical-align: middle;
+    }
+	table.table tr th:first-child {
+		width: 60px;
+	}
+	table.table tr th:last-child {
+		width: 100px;
+	}
+    table.table-striped tbody tr:nth-of-type(odd) {
+    	background-color: #fcfcfc;
+	}
+	table.table-striped.table-hover tbody tr:hover {
+		background: #f5f5f5;
+	}
+    table.table th i {
+        font-size: 13px;
+        margin: 0 5px;
+        cursor: pointer;
+    }	
+    table.table td:last-child i {
+		opacity: 0.9;
+		font-size: 22px;
+        margin: 0 5px;
+    }
+	table.table td a {
+		font-weight: bold;
+		color: #566787;
+		display: inline-block;
+		text-decoration: none;
+	}
+	table.table td a:hover {
+		color: #0b7358;
+	}
+	table.table td a.settings {
+        color: #0b7358;
+    }
+    table.table td a.delete {
+        color: #F44336;
+    }
+    table.table td i {
+        font-size: 19px;
+    }
+	table.table .avatar {
+		border-radius: 50%;
+		vertical-align: middle;
+		margin-right: 10px;
+	}
+	.status {
+		font-size: 30px;
+		margin: 2px 2px 0 0;
+		display: inline-block;
+		vertical-align: middle;
+		line-height: 10px;
+	}
+    .text-success {
+        color: #10c469;
+    }
+    .text-info {
+        color: #0b7358;
+    }
+    .text-warning {
+        color: #FFC107;
+    }
+    .text-danger {
+        color: #ff5b5b;
+    }
+    .pagination {
+        float: right;
+        margin: 0 0 5px;
+    }
+    .pagination li a {
+        border: none;
+        font-size: 13px;
+        min-width: 30px;
+        min-height: 30px;
+        color: #999;
+        margin: 0 2px;
+        line-height: 30px;
+        border-radius: 2px !important;
+        text-align: center;
+        padding: 0 6px;
+    }
+    .pagination li a:hover {
+        color: #666;
+    }	
+    .pagination li.active a, .pagination li.active a.page-link {
+        background: #0b7358;
+    }
+    .pagination li.active a:hover {        
+        background: #0b7358;
+    }
+	.pagination li.disabled i {
+        color: #ccc;
+    }
+    .pagination li i {
+        font-size: 16px;
+        padding-top: 6px
+    }
+    .hint-text {
+        float: left;
+        margin-top: 10px;
+        font-size: 13px;
+    }
+
+    .eole{
+        background-color: #0b7358;
+    }
+    
+    .txt{
+        color: white;
+    }
+
+    .eole-text{
+        color: #0b7358;
+    }
+
+    .card {
+        width: 300px;
+        display: inline-block;
+        margin: 1rem;
+        border-radius: 4px;
+        box-shadow: 0 -1px 1px 0 rgba(0, 0, 0, 0.05), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+        -webkit-transition: all .2s ease;
+        transition: all .2s ease;
+        background: #fff;
+        position: relative;
+        overflow: hidden;
+      }
+      .card:hover, .card.hover {
+        -webkit-transform: translateY(-4px);
+                transform: translateY(-4px);
+        box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.3), 0 0 1px 0 rgba(0, 0, 0, 0.25);
+      }
+      .card:hover .card-content, .card.hover .card-content {
+        box-shadow: inset 0 3px 0 0 #0b7358;
+        border-color: #0b7358;
+      }
+      .card:hover .card-img .overlay, .card.hover .card-img .overlay {
+        background-color: rgba(25, 29, 38, 0.85);
+        -webkit-transition: opacity .2s ease;
+        transition: opacity .2s ease;
+        opacity: 1;
+      }
+      .card-img {
+        position: relative;
+        height: 224px;
+        width: 100%;
+        background-color: #fff;
+        -webkit-transition: opacity .2s ease;
+        transition: opacity .2s ease;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .card-img .overlay {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        opacity: 0;
+      }
+      .card-img .overlay .overlay-content {
+        line-height: 224px;
+        width: 100%;
+        text-align: center;
+        color: #fff;
+      }
+      .card-img .overlay .overlay-content a {
+        color: #fff;
+        padding: 0 2rem;
+        display: inline-block;
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        height: 40px;
+        line-height: 40px;
+        border-radius: 20px;
+        cursor: pointer;
+        text-decoration: none;
+      }
+      .card-img .overlay .overlay-content a:hover, .card-img .overlay .overlay-content a.hover {
+        background: #0b7358;
+        border-color: #0b7358;
+      }
+      .card-content {
+        width: 100%;
+        min-height: 104px;
+        background-color: #fff;
+        border-top: 1px solid #E9E9EB;
+        border-bottom-right-radius: 4px;
+        border-bottom-left-radius: 4px;
+        padding: 1rem 2rem;
+        -webkit-transition: all .2s ease;
+        transition: all .2s ease;
+      }
+      .card-content a {
+        text-decoration: none;
+        color: #202927;
+      }
+      .card-content h2, .card-content a h2 {
+        font-size: 1rem;
+        font-weight: 500;
+      }
+      .card-content p, .card-content a p {
+        font-size: .8rem;
+        font-weight: 400;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: rgba(32, 41, 28, 0.8);
+      }
+
+      h1{
+        font-size:30px;
+    }
+    .table.table-striped .table-header{
+        background:#6739B6;
+        color:#fff;
+    }
+    .table .table-header .cell{
+        padding:20px;
+    }
+    @media screen and (max-width: 640px){
+        table {
+            overflow-x: auto;
+            display: block;
+        }
+        .table .table-header .cell{
+            padding:20px 5px;
+        }
+    }
