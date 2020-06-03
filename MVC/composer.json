@@ -1,0 +1,17 @@
+{
+    "name": "tom.litaudon/eval",
+    "authors": [
+        {
+            "name": "tomlitaudon",
+            "email": "tlitaudon@gmail.com"
+        }
+    ],
+    "require": {},
+
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    }
+
+}
