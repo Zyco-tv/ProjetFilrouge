@@ -262,3 +262,23 @@ body {
         text-overflow: ellipsis;
         color: rgba(32, 41, 28, 0.8);
       }
+
+      h1{
+        font-size:30px;
+    }
+    .table.table-striped .table-header{
+        background:#6739B6;
+        color:#fff;
+    }
+    .table .table-header .cell{
+        padding:20px;
+    }
+    @media screen and (max-width: 640px){
+        table {
+            overflow-x: auto;
+            display: block;
+        }
+        .table .table-header .cell{
+            padding:20px 5px;
+        }
+    }
