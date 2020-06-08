@@ -22,13 +22,13 @@
                 require VIEW .'index.php';
             }
             public function homeArticle() {
-                require VIEW .'blog-home.php';
+                require VIEW .'blog/blog-home.php';
             }
             
             public function show($firstname)
             {
                 $candidature = $this->manager->find($firstname);
-                require VIEW.'show.php';
+                require VIEW.'blog/blog-post.php';
             }
         
             // public function showProfil($user) {
@@ -59,7 +59,7 @@
             //     $this->redirect('/dashboard/'. $_POST["pseudo"]);
             // }
 
-        public function editeCommenbtaire($id)
+        public function editeCommentaire($id)
         {
             $this->validator->validate([
                 'text' => ['required']

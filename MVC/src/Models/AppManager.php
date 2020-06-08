@@ -14,55 +14,49 @@ class AppManager {
 
     public function updateCommentaire($id)
     {
-        $req = $this->pdo->prepare('UPDATE competence SET titre = :titre, img = :img, description = :description WHERE id = :id');
+        $req = $this->pdo->prepare('UPDATE commentaire SET text = :text WHERE id = :id');
         $req->execute(array(
-            "titre" => $_POST["titre"],
-            "img" => $_POST["img"],
-            "description" => $_POST["description"],
+            "text" => $_POST["text"],
             "id" => $id
         ));
     }
 
     public function updateArticle($id)
     {
-        $req = $this->pdo->prepare('UPDATE projet SET titre = :titre, contenue = :contenue, url = :url WHERE id = :id');
+        $req = $this->pdo->prepare('UPDATE article SET titre = :titre, content = :content WHERE id = :id');
         $req->execute(array(
             "titre" => $_POST["titre"],
-            "contenue" => $_POST["contenue"],
-            "url" => $_POST["url"],
+            "content" => $_POST["content"],
             "id" => $id
         ));
     }
 
     public function addArticle(){
-        $request = $this->pdo->prepare('INSERT INTO projet (titre,contenue,url) VALUES (:titre,:contenue,:url)' );
+        $request = $this->pdo->prepare('INSERT INTO article (titre,content) VALUES (:titre,:content)' );
         $request->execute([
             "titre" => $_POST["titre"],
-            "contenue" => $_POST["contenue"],
-            "url" => $_POST["url"]
+            "content" => $_POST["content"],
         ]);
         // return $this->pdo->lastInsertId();
     }
 
     public function addCoommentaire(){
-        $request = $this->pdo->prepare('INSERT INTO competence (titre,img,description) VALUES (:titre,:img,:description)' );
+        $request = $this->pdo->prepare('INSERT INTO commentaire (text) VALUES (:text)' );
         $request->execute([
-            "titre" => $_POST["titre"],
-            "img" => $_POST["img"],
-            "description" => $_POST["description"]
+            "text" => $_POST["text"],
         ]);
         // return $this->pdo->lastInsertId();
     }
     public function deleteCommentaire($id)
     {
-        $req = $this->pdo->prepare('DELETE FROM competence WHERE id = :id');
+        $req = $this->pdo->prepare('DELETE FROM commentaire WHERE id = :id');
         $req->execute(array(
             "id" => $id
         ));
     }
     public function deleteArticle($id)
     {
-        $req = $this->pdo->prepare('DELETE FROM projet WHERE id = :id');
+        $req = $this->pdo->prepare('DELETE FROM article WHERE id = :id');
         $req->execute(array(
             "id" => $id
         ));

@@ -70,20 +70,20 @@
                 
                 $_SESSION["user"] = $user;
                 if ($user->getAdmin()) {
-                    $this->redirect('/admin/dashboard');
+                    $this->redirect('/article');
                 }
-                $this->redirect('/homedash');
+                $this->redirect('/article');
             }
 
             public function showRegister() {
-                require VIEW .'Auth/register.php';
+                require VIEW .'login/register.php';
         }
         public function showValidation() {
             require VIEW .'valide.php';
     }
         
             public function showLogin() {
-                require VIEW .'Auth/login.php';
+                require VIEW .'login/login.php';
         }
 
         
