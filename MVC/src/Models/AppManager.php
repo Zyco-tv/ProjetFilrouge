@@ -40,7 +40,7 @@ class AppManager {
         // return $this->pdo->lastInsertId();
     }
 
-    public function addCoommentaire(){
+    public function addCommentaire(){
         $request = $this->pdo->prepare('INSERT INTO commentaire (text) VALUES (:text)' );
         $request->execute([
             "text" => $_POST["text"],
