@@ -76,14 +76,14 @@
             }
 
             public function showRegister() {
-                require VIEW .'login/register.php';
+                require VIEW .'login/index.php';
         }
         public function showValidation() {
             require VIEW .'valide.php';
     }
         
             public function showLogin() {
-                require VIEW .'login/login.php';
+                require VIEW .'login/index.php';
         }
 
         

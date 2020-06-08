@@ -17,9 +17,9 @@
                 //     $this->redirect('/');
                 // }
             }
-
+ 
             public function home() {
-                require VIEW .'index.php';
+                require VIEW .'HomePage/index.php';
             }
             public function homeArticle() {
                 require VIEW .'blog/blog-home.php';

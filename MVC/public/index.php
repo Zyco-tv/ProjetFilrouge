@@ -8,7 +8,7 @@ define('MODEL',__DIR__.'/../src/Models/');
 define('VIEW',__DIR__.'/../src/Views/');
 
 define('USER', 'root');
-define('DATABASE','projetfilsrouge');
+define('DATABASE','prj_fil_rouge');
 define('PASSWORD','root');
 
 

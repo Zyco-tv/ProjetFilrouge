@@ -28,13 +28,10 @@ class Router {
         else if ($this->url == '/register' && $this->method == 'POST') {
             $controllerUser->register();
         }
-        else if ($this->url == '/login' && $this->method == 'GET') {
-            $controllerUser->showLogin();
-        }
         else if ($this->url == '/login' && $this->method == 'POST') {
             $controllerUser->login();
         }
-        else if ($this->url == '/article' && $this->method == 'POST') {
+        else if ($this->url == '/article' && $this->method == 'GET') {
             $controllerApp->homeArticle();
         }
         else if ($this->url == '/article/creat' && $this->method == 'POST') {

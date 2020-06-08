@@ -16,15 +16,15 @@
     <div class="backbox">
       <div class="loginMsg">
         <div class="textcontent">
-          <p class="title">Tu a pas de compte ?</p>
-          <p>Tu peut t'inscrire.</p>
+          <p class="title">Tu n'as pas de compte ?</p>
+          <p>Tu peux t'inscrire.</p>
           <button id="switch1">Inscription</button>
         </div>
       </div>
       <div class="signupMsg visibility">
         <div class="textcontent">
-          <p class="title">Tu a deja un compte?</p>
-          <p>Alors tu peut te connecter.</p>
+          <p class="title">Tu as deja un compte?</p>
+          <p>Alors tu peux te connecter.</p>
           <button id="switch2">Connection</button>
         </div>
       </div>
@@ -38,7 +38,7 @@
           <input type="text" name="email" placeholder="email">
           <input type="password" name="password" placeholder="mot de passe">
         </div>
-        <p>Mot de passe oublie?</p>
+        <p>Mot de passe oublié?</p>
         <button>Connection</button>
       </div>
 
