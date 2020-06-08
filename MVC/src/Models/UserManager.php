@@ -9,9 +9,10 @@ class UserManager {
         $this->pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
     }
     public function store(){
-        $request = $this->pdo->prepare('INSERT INTO user (pseudo,password) VALUES (:pseudo,:password);');
+        $request = $this->pdo->prepare('INSERT INTO user (pseudo,mail,password) VALUES (:pseudo,:mail:,:password);');
         $request->execute([
             "pseudo" => $_POST["pseudo"],
+            "mail" => $_POST["mail"],
             "password" => password_hash($_POST["password"],PASSWORD_DEFAULT),
         ]);
         return $this->pdo->lastInsertId();

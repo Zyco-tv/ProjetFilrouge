@@ -12,7 +12,8 @@
             }
             public function register() {
                 $this->validator->validate([
-                    'pseudo' => ['required', 'alpha', 'min:2'],
+                    'name' => ['required', 'alpha', 'min:2'],
+                    'mail' => ['required'],
                     'password' => ['required', 'alphaNumDash', 'min:6'],
                     'confirm' => ['required']
                 ]);
@@ -31,24 +32,24 @@
                 }
 
                 
-                $user = $this->manager->find($_POST["pseudo"]);
+                $user = $this->manager->find($_POST["name"]);
 
                 if (!$user && empty($_SESSION['errors'])) {
                     $id = $this->manager->store();
                     $user = $this->manager->findById($id);
                     $_SESSION["user"] = $user;
-                    $this->redirect('/homedash');
+                    $this->redirect('/article');
                     
                 }
                 
-                $_SESSION["errors"]["pseudo"] = "Cet username est déja utilisé";
+                $_SESSION["errors"]["name"] = "Cet username est déja utilisé";
                 $this->redirect('/register');
                 
             }
 
             public function login() {
                 $this->validator->validate([
-                    'pseudo' => ['required', 'alpha', 'min:2'],
+                    'name' => ['required', 'alpha', 'min:2'],
                     'password' => ['required', 'alphaNumDash', 'min:6']
                 ]);
         
@@ -59,7 +60,7 @@
                     $this->redirect('/login');
                 }
         
-                $user = $this->manager->find($_POST["pseudo"]);
+                $user = $this->manager->find($_POST["name"]);
         
                 if (!$user || ($user && !password_verify($_POST["password"], $user->getPassword()))) {
                     $_SESSION["errors"]["password"] = "Les identifiant ne sont pas bon";

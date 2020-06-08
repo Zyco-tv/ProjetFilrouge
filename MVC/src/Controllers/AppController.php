@@ -21,6 +21,10 @@
             public function home() {
                 require VIEW .'index.php';
             }
+            public function homeArticle() {
+                require VIEW .'blog-home.php';
+            }
+            
             public function show($firstname)
             {
                 $candidature = $this->manager->find($firstname);

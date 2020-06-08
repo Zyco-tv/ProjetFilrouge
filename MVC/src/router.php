@@ -34,6 +34,9 @@ class Router {
         else if ($this->url == '/login' && $this->method == 'POST') {
             $controllerUser->login();
         }
+        else if ($this->url == '/article' && $this->method == 'POST') {
+            $controllerApp->homeArticle();
+        }
         else if ($this->url == '/article/creat' && $this->method == 'POST') {
             $controllerApp->ajoutArticle();
         }
