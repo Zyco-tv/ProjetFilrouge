@@ -24,6 +24,7 @@ CREATE TABLE `article` (
   `id_article` int(10) UNSIGNED NOT NULL,
   `title` char(50) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `img` text NOT NULL,
   `content` text NOT NULL,
   `id_user` int(10) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -64,6 +65,7 @@ CREATE TABLE `report` (
 CREATE TABLE `user` (
   `id_user` int(10) UNSIGNED NOT NULL,
   `name` char(50) NOT NULL,
+  `role` char(50) NOT NULL,
   `mail` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
