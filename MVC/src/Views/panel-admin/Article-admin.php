@@ -70,56 +70,24 @@ $(function() {
           <hr>
         
           <div class="d-flex justify-content-around">
+          <?php foreach ($archives as $archive) { ?>
             <div class="card">
-                <div class="card-img" style="background-image:url(https://images.unsplash.com/photo-1493847242172-d46053a1f671?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=9f91dd5d50f16ba80af53a62d4caf2ce&auto=format&fit=crop&w=500&q=60);">
+                <div class="card-img" style="background-image:url(<?php echo $archive->getImg();?>);">
                     <div class="overlay">
                         <div class="overlay-content">
-                            <a class="" href="#!">View Project</a>
+                            <a class="" href="#!">Voir le projet</a>
                         </div>
                     </div>
                 </div>
                 
                 <div class="card-content">
                     <a href="#!">
-                        <h2>Title</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur, lorem ipsum dolor</p>
+                        <h2><?php echo $archive->getTitle();?></h2>
+                        <p><?php echo $archive->getContent();?></p>
                     </a>
                 </div>
             </div>
-            
-            <div class="card">
-                <div class="card-img" style="background-image:url(https://images.unsplash.com/photo-1491374812364-00028bbe7d2f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a22e4862c36c552e726815949fbcb41a&auto=format&fit=crop&w=500&q=60);">
-                    <div class="overlay">
-                        <div class="overlay-content">
-                            <a href="#!">View Project</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="card-content">
-                    <a href="#!">
-                        <h2>Title</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur, lorem ipsum dolor</p>
-                    </a>
-                </div>
-            </div>
-            
-            <div class="card">
-                <div class="card-img" style="background-image:url(https://images.unsplash.com/photo-1519176336903-04be58a477d2?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=eda05ddcb3154f39fd8ce88fdd44f531&auto=format&fit=crop&w=500&q=60);">
-                    <div class="overlay">
-                        <div class="overlay-content">
-                            <a href="#!">View Project</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="card-content">
-                    <a href="#!">
-                        <h2>Title</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur, lorem ipsum dolor</p>
-                    </a>
-                </div>
-            </div>
+            <?php } ?>
           </div>
 
           

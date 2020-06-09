@@ -37,7 +37,7 @@ use App\Models\UserManager;
 
             public function ArticleApplication()
             {
-                // $archives = $this->manager->all();
+                $archives = $this->manager->allarticle();
                 require VIEW.'panel-admin/Article-admin.php';
             }
 

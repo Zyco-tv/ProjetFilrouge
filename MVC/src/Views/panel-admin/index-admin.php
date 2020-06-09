@@ -100,9 +100,9 @@ $(function() {
                         
                         <tr>
                             <td>1</td>
-                            <td><a href="#"><?php echo $archives[0]->getName();?></a></td>
-                            <td><a href="#"><?php echo $archives[0]->getDate();?></a></td>
-                            <td><?php echo $archives[0]->getMail();?></td>                        
+                            <td><a href="#"><?php echo $archive->getName();?></a></td>
+                            <td><a href="#"><?php echo $archive->getDate();?></a></td>
+                            <td><?php echo $archive->getMail();?></td>                        
                             <td>
                                 <a href="#" class="settings" title="Settings" data-toggle="tooltip"><i class="material-icons">&#xE8B8;</i></a>
                                 <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE5C9;</i></a>

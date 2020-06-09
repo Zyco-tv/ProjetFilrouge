@@ -14,11 +14,24 @@ class AppManager {
 
     public function all() {
         $request = $this->pdo->prepare('SELECT * FROM user');
-        $request->execute();
+        $request->execute([
+            "pseudo" => $pseudo,
+            "mail" => $mail,
+            "date_creation" => $date_creation
+        ]);
         $request->setFetchMode(\PDO::FETCH_CLASS, '\App\Models\App');
         return $request->fetchAll();
     }
-
+    public function allarticle() {
+        $request = $this->pdo->prepare('SELECT * FROM article');
+        $request->execute([
+            "title" => $title,
+            "img" => $img,
+            "content" => $content
+        ]);
+        $request->setFetchMode(\PDO::FETCH_CLASS, '\App\Models\App');
+        return $request->fetchAll();
+    }
     
     public function updateCommentaire($id)
     {
