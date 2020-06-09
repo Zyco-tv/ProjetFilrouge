@@ -10,6 +10,8 @@ class App {
     private $img;
     private $title;
     private $content;
+    private $id_user;
+    
 
 
 
@@ -31,5 +33,8 @@ class App {
     }
     public function getContent(){
         return $this->content;
+    }
+    public function getId(){
+        return $this->id_user;
     }
 }

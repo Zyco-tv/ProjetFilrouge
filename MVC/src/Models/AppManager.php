@@ -17,7 +17,8 @@ class AppManager {
         $request->execute([
             "pseudo" => $pseudo,
             "mail" => $mail,
-            "date_creation" => $date_creation
+            "date_creation" => $date_creation,
+            "id_user" => $id_user
         ]);
         $request->setFetchMode(\PDO::FETCH_CLASS, '\App\Models\App');
         return $request->fetchAll();
@@ -47,7 +48,8 @@ class AppManager {
         $request->execute([
             "pseudo" => $pseudo,
             "mail" => $mail,
-            "date_creation" => $date_creation
+            "date_creation" => $date_creation,
+            "id_user" => $id_user
         ]);
         $request->setFetchMode(\PDO::FETCH_CLASS, '\App\Models\App');
         return $request->fetchAll();
@@ -96,7 +98,7 @@ class AppManager {
     }
     public function deleteArticle($id)
     {
-        $req = $this->pdo->prepare('DELETE FROM article WHERE id = :id');
+        $req = $this->pdo->prepare('DELETE FROM article WHERE id_user = :id_user');
         $req->execute(array(
             "id" => $id
         ));

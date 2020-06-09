@@ -141,7 +141,7 @@ $(function() {
                     
                     <?php foreach ($utilisateurs as $utilisateur) { ?>
                     <tr  class="active">
-                        <td>1</td>
+                        <td><?php echo $archive->getId();?></td>
                         <td><?php echo $utilisateur->getName();?></td>
                         <td><?php echo $utilisateur->getMail();?></td>
                         <td><?php echo $utilisateur->getDate();?></td>

@@ -135,9 +135,9 @@
             $this->manager->deleteCommentaire($id);
             $this->redirect('/edite');
         }
-        public function deleteArticle($id) {
-            $this->manager->deleteArticle($id);
-            $this->redirect('/edite');
+        public function deleteArticle($id_user) {
+            $this->manager->deleteArticle($id_user);
+            $this->redirect('/Dashboard/User');
         }
         
         

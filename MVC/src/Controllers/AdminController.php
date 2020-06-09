@@ -30,6 +30,7 @@ use App\Models\UserManager;
                 require VIEW.'panel-admin/edite-admin.php';
             }
 
+
             public function ReportApplication()
             {
                 // $archives = $this->manager->all();
