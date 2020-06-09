@@ -1,9 +1,3 @@
-/*!
- * Start Bootstrap - Grayscale v5.0.2 (https://startbootstrap.com/template-overviews/grayscale)
- * Copyright 2013-2018 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-grayscale/blob/master/LICENSE)
- */
-
 #mainNav {
   min-height: 56px;
   background-color: #fff;
@@ -12,8 +6,8 @@
 #mainNav .navbar-toggler {
   font-size: 80%;
   padding: 0.75rem;
-  color: #0b7358;
-  border: 1px solid #0b7358;
+  color: #64a19d;
+  border: 1px solid #64a19d;
 }
 
 #mainNav .navbar-toggler:focus {
@@ -27,7 +21,7 @@
 }
 
 #mainNav .navbar-nav .nav-item:hover {
-  color: fade(white, 90%);
+  color: fade(white, 80%);
   outline: none;
   background-color: transparent;
 }
@@ -48,16 +42,16 @@
   }
   #mainNav .navbar-brand {
     padding: .5rem 0;
-    color: rgba(255, 255, 255, 0.85);
+    color: rgba(255, 255, 255, 0.5);
   }
   #mainNav .nav-link {
     -webkit-transition: none;
     transition: none;
     padding: 2rem 1.5rem;
-    color: rgba(255, 255, 255, 0.85);
+    color: rgba(255, 255, 255, 0.5);
   }
   #mainNav .nav-link:hover {
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(255, 255, 255, 0.75);
   }
   #mainNav .nav-link:active {
     color: white;
@@ -74,15 +68,15 @@
     border-bottom: 0.25rem solid transparent;
   }
   #mainNav.navbar-shrink .nav-link:hover {
-    color: #0b7358;
+    color: #64a19d;
   }
   #mainNav.navbar-shrink .nav-link:active {
     color: #467370;
   }
   #mainNav.navbar-shrink .nav-link.active {
-    color: #0b7358;
+    color: #64a19d;
     outline: none;
-    border-bottom: 0.25rem solid #0b7358;
+    border-bottom: 0.25rem solid #64a19d;
   }
 }
 
@@ -92,11 +86,9 @@
   height: auto;
   min-height: 35rem;
   padding: 15rem 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(22, 22, 22, 0.3)), color-stop(75%, rgba(22, 22, 22, 0.2)), to(#3e3e3e00)), url("https://wallpaperset.com/w/full/c/9/0/522708.jpg");
-  background: linear-gradient(to bottom, rgba(22, 22, 22, 0.6) 0%, rgba(22, 22, 22, 0.2) 75%, #3e3e3e00 100%), url("https://wallpaperset.com/w/full/c/9/0/522708.jpg");
-  
-
- background-position: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(22, 22, 22, 0.1)), color-stop(75%, rgba(22, 22, 22, 0.5)), to(#161616)), url("../img/bg-masthead.jpg");
+  background: linear-gradient(to bottom, rgba(22, 22, 22, 0.1) 0%, rgba(22, 22, 22, 0.5) 75%, #161616 100%), url("../img/bg-masthead.jpg");
+  background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
@@ -107,15 +99,14 @@
   font-size: 2.5rem;
   line-height: 2.5rem;
   letter-spacing: 0.8rem;
-  background: -webkit-linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.75));
+  background: -webkit-linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
 
 .masthead h2 {
-  max-width: 17rem;
-  line-height: 1.8rem;
-  font-size: 1.3rem;
+  max-width: 20rem;
+  font-size: 1rem;
 }
 
 @media (min-width: 768px) {
@@ -131,20 +122,19 @@
     padding: 0;
   }
   .masthead h1 {
-    font-size: 4.1rem;
+    font-size: 6.5rem;
     line-height: 6.5rem;
     letter-spacing: 0.8rem;
   }
   .masthead h2 {
     max-width: 30rem;
-    line-height: 1.8rem;
-    font-size: 1.3rem;
+    font-size: 1.25rem;
   }
 }
 
 .btn {
   -webkit-box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
-  box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
+          box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
   padding: 1.25rem 2rem;
   font-family: 'Varela Round';
   font-size: 80%;
@@ -153,59 +143,8 @@
   border: 0;
 }
 
-/*#section05 { background: url(https://picsum.photos/1200/800?image=1037) center center / cover no-repeat;}*/
-
-#scroll a {
-  padding-top: 70px;
-}
-#scroll a span {
-  position: absolute;
-  bottom:90px;
-  /*top: 0;*/
-  left: 50%;
-  width: 24px;
-  height: 24px;
-  margin-left: -12px;
-  border-left: 3px solid #fff;
-  border-bottom: 3px solid #fff;
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  -webkit-animation: sdb 1.5s infinite;
-  animation: sdb 1.5s infinite;
-  box-sizing: border-box;
-}
-
-@-webkit-keyframes sdb {
-  0% {
-    -webkit-transform: rotate(-45deg) translate(0, 0);
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: rotate(-45deg) translate(-20px, 20px);
-    opacity: 0;
-  }
-}
-@keyframes sdb {
-  0% {
-    transform: rotate(-45deg) translate(0, 0);
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    transform: rotate(-45deg) translate(-20px, 20px);
-    opacity: 0;
-  }
-}
-
-
-
 .btn-primary {
-  background-color: #0b7358;
+  background-color: #64a19d;
 }
 
 .btn-primary:hover {
@@ -222,8 +161,9 @@
 }
 
 .about-section {
-  padding-top: 4rem;
-  padding-bottom: 5rem;
+  padding-top: 10rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(#161616), color-stop(75%, rgba(22, 22, 22, 0.9)), to(rgba(22, 22, 22, 0.8)));
+  background: linear-gradient(to bottom, #161616 0%, rgba(22, 22, 22, 0.9) 75%, rgba(22, 22, 22, 0.8) 100%);
 }
 
 .about-section p {
@@ -231,7 +171,7 @@
 }
 
 .projects-section {
-  padding: 4rem 0;
+  padding: 10rem 0;
 }
 
 .projects-section .featured-text {
@@ -241,7 +181,7 @@
 @media (min-width: 992px) {
   .projects-section .featured-text {
     padding: 0 0 0 2rem;
-    border-left: 0.5rem solid #0b7358;
+    border-left: 0.5rem solid #64a19d;
   }
 }
 
@@ -255,7 +195,7 @@
     padding: 5rem;
   }
   .projects-section .project-text hr {
-    border-color: #0b7358;
+    border-color: #64a19d;
     border-width: .25rem;
     width: 30%;
   }
@@ -263,8 +203,8 @@
 
 .signup-section {
   padding: 10rem 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(22, 22, 22, 0.1)), color-stop(75%, rgba(22, 22, 22, 0.25)), to(#16161640)), url("../img/demo-image-03.jpg");
-  background: linear-gradient(to bottom, rgba(22, 22, 22, 0.1) 0%, rgba(22, 22, 22, 0.25) 75%, #16161640 100%), url("../img/demo-image-03.jpg");
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(22, 22, 22, 0.1)), color-stop(75%, rgba(22, 22, 22, 0.5)), to(#161616)), url("../img/bg-signup.jpg");
+  background: linear-gradient(to bottom, rgba(22, 22, 22, 0.1) 0%, rgba(22, 22, 22, 0.5) 75%, #161616 100%), url("../img/bg-signup.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -273,7 +213,7 @@
 
 .signup-section .form-inline input {
   -webkit-box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
-  box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
+          box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
   padding: 1.25rem 2rem;
   height: auto;
   font-family: 'Varela Round';
@@ -284,12 +224,12 @@
 }
 
 .contact-section {
-  padding: 3rem 0 0;
+  padding: 5rem 0 0;
 }
 
 .contact-section .card {
   border: 0;
-  border-bottom: 0.25rem solid #0b7358;
+  border-bottom: 0.25rem solid #64a19d;
 }
 
 .contact-section .card h4 {
@@ -300,7 +240,7 @@
 }
 
 .contact-section .card hr {
-  border-color: #0b7358;
+  border-color: #64a19d;
   border-width: 0.25rem;
   width: 3rem;
 }
@@ -333,7 +273,7 @@ body {
 }
 
 a {
-  color: #0b7358;
+  color: #64a19d;
 }
 
 a:focus, a:hover {
@@ -342,46 +282,18 @@ a:focus, a:hover {
 }
 
 .bg-black {
-  background-color: #161616f5 !important;
+  background-color: #161616 !important;
 }
-
-.bg-grey {
-  background-color: #a9a9a933 !important;
-}
-
 
 .bg-primary {
-  background-color: #0b7358 !important;
-}
-
-.text-grey {
-  color: rgba(255, 255, 255, 0.75);
+  background-color: #64a19d !important;
 }
 
 .text-primary {
-  color: #0b7358 !important;
+  color: #64a19d !important;
 }
 
 footer {
-  padding: 3rem 0;
+  padding: 5rem 0;
 }
-
-@keyframes anime {
-  0% {
-    left: 40%;
-    opacity: 0;
-  }
-  100% {
-    left: 50%;
-    opacity: 1;
-  }
-}
-
-.full {
-  position: absolute;
-  height: 100%;
-  top: 0;
-  left: 50%;
-  animation: anime 5s ease;
-}
-
+/*# sourceMappingURL=grayscale.css.map */

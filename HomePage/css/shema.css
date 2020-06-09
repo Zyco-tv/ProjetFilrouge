@@ -205,3 +205,16 @@ color: #E4755D;
 .backgroundtu{
   background-color: rgb(207, 207, 207);
 }
+/*
+@media screen and (max-width: 5000px){   
+  .shema{      
+      content:url("https://cdn.discordapp.com/attachments/692286899343065099/710404683012898836/1200px-Schema_eolienne.svg.png");
+  } 
+}
+
+@media screen and (max-width: 990px){   
+  .shema{      
+      content:url("img/shemaEOLE.jpg") !important;
+  } 
+}
+*/

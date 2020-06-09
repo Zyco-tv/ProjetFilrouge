@@ -66,7 +66,7 @@
           <h1 class="mx-auto my-0 text-uppercase">Dans le vent</h1>
           <h2 class="text-grey mx-auto mt-5 mb-5">Projet fils rouge 2019-2020 Edenschool France</h2>
           <div>
-            <img src="img/eolienne.png" alt="eolienne" class="full"/>
+            <img src="img/eolienne.png" alt="eolienne" class="full d-none d-xl-block"/>
           </div>
 	  <div id="scroll">
 	    <a href="#about" class="js-scroll-trigger"><span></span></a>
@@ -137,9 +137,12 @@ Notre mission est simple nous devions crée une éolienne pour pouvoir charger n
   <section class="o-section">
     <div class="c-hotspot-image">
       <div class="c-hotspot-image__visual">
-        <img class="shema"
-          src="https://cdn.discordapp.com/attachments/692286899343065099/710404683012898836/1200px-Schema_eolienne.svg.png"
-          alt="">
+          <picture>
+            <source srcset="https://cdn.discordapp.com/attachments/692286899343065099/710404683012898836/1200px-Schema_eolienne.svg.png" media="(min-width: 1700px)"/>
+            <source srcset="img/shemaEOLE.jpg" media="(min-width: 600px)"/>
+            <img src="https://placehold.it/400x400" alt="example"/>
+
+          </picture>
       </div>
       <div class="c-hotspot-image__hotspots js-hotspot-container">
         <!-- HOTSPOT -->
