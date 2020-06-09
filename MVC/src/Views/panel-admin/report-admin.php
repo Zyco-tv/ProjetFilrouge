@@ -36,7 +36,7 @@ $(function() {
   
     <ul class="nav flex-column bg-white mb-0">
       <li class="nav-item">
-        <a href="home.html" class="nav-link text-dark font-italic">
+        <a href="/Dashboard" class="nav-link text-dark font-italic">
                   <i class="fa fa-th-large mr-3 eole-text fa-fw"></i>
                   Home
               </a>
@@ -77,7 +77,7 @@ $(function() {
                 <div class="table-title">
                     <div class="row">
                         <div class="col-sm-5">
-                            <h2>Panel <b>User Eole</b></h2>
+                            <h2>Panel <b>report Eole</b></h2>
                         </div>
                         
                     </div>
