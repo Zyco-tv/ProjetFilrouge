@@ -12,6 +12,14 @@ class AppManager {
         $this->pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
     }
 
+    public function all() {
+        $request = $this->pdo->prepare('SELECT * FROM user');
+        $request->execute();
+        $request->setFetchMode(\PDO::FETCH_CLASS, '\App\Models\App');
+        return $request->fetchAll();
+    }
+
+    
     public function updateCommentaire($id)
     {
         $req = $this->pdo->prepare('UPDATE commentaire SET text = :text WHERE id = :id');
