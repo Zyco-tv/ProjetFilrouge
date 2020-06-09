@@ -2,22 +2,22 @@
 -- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
--- Hôte : localhost:3306
--- Généré le :  mer. 03 juin 2020 à 13:54
--- Version du serveur :  5.7.26
--- Version de PHP :  7.3.8
+-- Host: localhost:3306
+-- Generation Time: Jun 09, 2020 at 09:01 AM
+-- Server version: 5.7.26
+-- PHP Version: 7.3.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 --
--- Base de données :  `prj_fil_rouge`
+-- Database: `prj_fil_rouge`
 --
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `article`
+-- Table structure for table `article`
 --
 
 CREATE TABLE `article` (
@@ -32,7 +32,7 @@ CREATE TABLE `article` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `commentaire`
+-- Table structure for table `commentaire`
 --
 
 CREATE TABLE `commentaire` (
@@ -45,7 +45,7 @@ CREATE TABLE `commentaire` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `report`
+-- Table structure for table `report`
 --
 
 CREATE TABLE `report` (
@@ -59,23 +59,29 @@ CREATE TABLE `report` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `user`
+-- Table structure for table `user`
 --
 
 CREATE TABLE `user` (
   `id_user` int(10) UNSIGNED NOT NULL,
   `pseudo` char(50) NOT NULL,
-  `role` char(50) NOT NULL,
   `mail` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Index pour les tables déchargées
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`id_user`, `pseudo`, `mail`, `password`) VALUES
+(6, 'tom', 'tlitaudon@gmail.com', '$2y$10$3a0BxcrZBt.ZkTt1muxYKetiQdanqPV0qrYKVjxuL5MrgGpU06gJa');
+
+--
+-- Indexes for dumped tables
 --
 
 --
--- Index pour la table `article`
+-- Indexes for table `article`
 --
 ALTER TABLE `article`
   ADD PRIMARY KEY (`id_article`),
@@ -83,73 +89,73 @@ ALTER TABLE `article`
   ADD KEY `fk_id_user` (`id_user`);
 
 --
--- Index pour la table `commentaire`
+-- Indexes for table `commentaire`
 --
 ALTER TABLE `commentaire`
   ADD UNIQUE KEY `id` (`id`),
   ADD KEY `fk_id_user_comment` (`id_user`);
 
 --
--- Index pour la table `report`
+-- Indexes for table `report`
 --
 ALTER TABLE `report`
   ADD PRIMARY KEY (`id_report`),
   ADD KEY `fk_id_user_report` (`id_user`);
 
 --
--- Index pour la table `user`
+-- Indexes for table `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`id_user`),
   ADD UNIQUE KEY `mail` (`mail`),
-  ADD UNIQUE KEY `name` (`name`);
+  ADD UNIQUE KEY `name` (`pseudo`);
 
 --
--- AUTO_INCREMENT pour les tables déchargées
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT pour la table `article`
+-- AUTO_INCREMENT for table `article`
 --
 ALTER TABLE `article`
   MODIFY `id_article` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT pour la table `commentaire`
+-- AUTO_INCREMENT for table `commentaire`
 --
 ALTER TABLE `commentaire`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT pour la table `report`
+-- AUTO_INCREMENT for table `report`
 --
 ALTER TABLE `report`
   MODIFY `id_report` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT pour la table `user`
+-- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id_user` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- Contraintes pour les tables déchargées
+-- Constraints for dumped tables
 --
 
 --
--- Contraintes pour la table `article`
+-- Constraints for table `article`
 --
 ALTER TABLE `article`
   ADD CONSTRAINT `fk_id_user` FOREIGN KEY (`id_user`) REFERENCES `user` (`id_user`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Contraintes pour la table `commentaire`
+-- Constraints for table `commentaire`
 --
 ALTER TABLE `commentaire`
   ADD CONSTRAINT `fk_id_user_comment` FOREIGN KEY (`id_user`) REFERENCES `user` (`id_user`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Contraintes pour la table `report`
+-- Constraints for table `report`
 --
 ALTER TABLE `report`
   ADD CONSTRAINT `fk_id_user_report` FOREIGN KEY (`id_user`) REFERENCES `user` (`id_user`) ON DELETE CASCADE ON UPDATE CASCADE;
