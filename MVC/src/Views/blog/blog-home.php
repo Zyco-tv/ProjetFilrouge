@@ -42,13 +42,13 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="faq.html">FAQ</a>
+            <a class="nav-link" href="/login">Connexion</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="services.html"></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
+            <a class="nav-link" href="/register">Inscription</a>
           </li>  
         </ul>
       </div>
