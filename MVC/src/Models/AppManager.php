@@ -32,12 +32,15 @@ class AppManager {
     }
 
     public function addArticle(){
-        $request = $this->pdo->prepare('INSERT INTO article (titre,content) VALUES (:titre,:content)' );
+        $request = $this->pdo->prepare('INSERT INTO article (title,img,content,id_user) VALUES (:title,:img,:content,:id_user)' );
+        //var_dump($request);
         $request->execute([
-            "titre" => $_POST["titre"],
+            "title" => $_POST["title"],
+            "img" => $_POST['img'],
             "content" => $_POST["content"],
-        ]);
-        // return $this->pdo->lastInsertId();
+            "id_user" => $_SESSION["user"]->id_user,
+            ]);
+            return $this->pdo->lastInsertId();
     }
 
     public function addCommentaire(){
@@ -60,8 +63,6 @@ class AppManager {
         $req->execute(array(
             "id" => $id
         ));
-
-
         
     }
 

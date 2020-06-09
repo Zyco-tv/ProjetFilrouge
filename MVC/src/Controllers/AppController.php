@@ -96,17 +96,18 @@
         public function ajoutArticle()
         {
             $this->validator->validate([
-                'titre' => ['required'],
-                'contenue' => ['required'],
-                'url' => ['required']
+                'title' => ['required'],
+                'content' => ['required'],
+                // 'url' => ['required']
             ]);
+
             $_SESSION["old"] = $_POST;
             if ($this->validator->errors()) {
                 $_SESSION["errors"] = $this->validator->errors();
-                $this->redirect('/edite');
+                $this->redirect('/article/creat');
             } else {
-                $this->manager->addProjet();
-                $this->redirect('/edite');
+                $this->manager->addArticle();
+                $this->redirect('/article');
             }
         }
 
