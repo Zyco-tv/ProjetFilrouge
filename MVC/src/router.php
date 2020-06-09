@@ -34,6 +34,9 @@ class Router {
         else if ($this->url == '/article' && $this->method == 'GET') {
             $controllerApp->homeArticle();
         }
+        else if ($this->url == '/article/creat' && $this->method == 'GET') {
+            $controllerApp->showCreat();
+        }
         else if ($this->url == '/article/creat' && $this->method == 'POST') {
             $controllerApp->ajoutArticle();
         }
@@ -45,6 +48,9 @@ class Router {
         }
         else if (preg_match('#^\/article\/commentaire\/([0-9]+)$#',$this->url, $matches) && $this->method == 'POST'){
             $controllerApp->editeCommentaire($matches[1]);
+        }
+        else if (preg_match('#^\/article\/edite\/([0-9]+)$#',$this->url, $matches) && $this->method == 'GET'){
+            $controllerApp->editeArticle($matches[1]);
         }
         else if (preg_match('#^\/article\/edite\/([0-9]+)$#',$this->url, $matches) && $this->method == 'POST'){
             $controllerApp->editeArticle($matches[1]);

@@ -18,7 +18,18 @@
   <link rel="stylesheet" href="css/style.css">
 
 </head>
+<style>
 
+
+.eole{
+  background-color: #0b7358;
+}
+
+.txt{
+  color: white;
+}
+
+</style>
 <body>
 
   <!-- Navigation -->

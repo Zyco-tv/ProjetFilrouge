@@ -110,6 +110,11 @@
             }
         }
 
+        public function showCreat()
+        {
+            require VIEW .'blog/create.php';
+        }
+
         public function ajoutCommentaire()
         {
             $this->validator->validate([
