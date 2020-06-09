@@ -28,6 +28,9 @@ class Router {
         else if ($this->url == '/register' && $this->method == 'POST') {
             $controllerUser->register();
         }
+        else if ($this->url == '/login' && $this->method == 'GET') {
+            $controllerUser->showLogin();
+        }
         else if ($this->url == '/login' && $this->method == 'POST') {
             $controllerUser->login();
         }

@@ -9,7 +9,7 @@ class UserManager {
         $this->pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
     }
     public function store(){
-        $request = $this->pdo->prepare('INSERT INTO user (pseudo,mail,password) VALUES (:pseudo,:mail:,:password);');
+        $request = $this->pdo->prepare('INSERT INTO user (pseudo,password,mail) VALUES (:pseudo,:password,:mail);');
         $request->execute([
             "pseudo" => $_POST["pseudo"],
             "mail" => $_POST["mail"],
@@ -27,9 +27,9 @@ class UserManager {
     }
     public function findById($id)
     {
-        $request = $this->pdo->prepare('SELECT * FROM ' . $this->table . ' WHERE id = :id');
+        $request = $this->pdo->prepare('SELECT * FROM ' . $this->table . ' WHERE id_user = :id_user');
         $request->execute([
-            "id" => $id
+            "id_user" => $id_user
         ]);
         $request->setFetchMode(\PDO::FETCH_CLASS, 'App\Models\User');
         return $request->fetch();

@@ -12,7 +12,7 @@
             }
             public function register() {
                 $this->validator->validate([
-                    'name' => ['required', 'alpha', 'min:2'],
+                    'pseudo' => ['required', 'alpha', 'min:2'],
                     'mail' => ['required'],
                     'password' => ['required', 'alphaNumDash', 'min:6'],
                     'confirm' => ['required']
@@ -32,7 +32,7 @@
                 }
 
                 
-                $user = $this->manager->find($_POST["name"]);
+                $user = $this->manager->find($_POST["pseudo"]);
 
                 if (!$user && empty($_SESSION['errors'])) {
                     $id = $this->manager->store();
@@ -42,15 +42,15 @@
                     
                 }
                 
-                $_SESSION["errors"]["name"] = "Cet username est déja utilisé";
+                $_SESSION["errors"]["pseudo"] = "Cet username est déja utilisé";
                 $this->redirect('/register');
                 
             }
 
             public function login() {
                 $this->validator->validate([
-                    'name' => ['required', 'alpha', 'min:2'],
-                    'password' => ['required', 'alphaNumDash', 'min:6']
+                    'pseudo' => ['required'],
+                    'password' => ['required']
                 ]);
         
                 if ($this->validator->errors()) {
@@ -60,7 +60,7 @@
                     $this->redirect('/login');
                 }
         
-                $user = $this->manager->find($_POST["name"]);
+                $user = $this->manager->find($_POST["pseudo"]);
         
                 if (!$user || ($user && !password_verify($_POST["password"], $user->getPassword()))) {
                     $_SESSION["errors"]["password"] = "Les identifiant ne sont pas bon";
@@ -69,9 +69,6 @@
                 
                 
                 $_SESSION["user"] = $user;
-                if ($user->getAdmin()) {
-                    $this->redirect('/article');
-                }
                 $this->redirect('/article');
             }
 
@@ -83,7 +80,7 @@
     }
         
             public function showLogin() {
-                require VIEW .'login/index.php';
+                require VIEW .'login/login.php';
         }
 
         

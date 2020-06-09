@@ -64,7 +64,7 @@ CREATE TABLE `report` (
 
 CREATE TABLE `user` (
   `id_user` int(10) UNSIGNED NOT NULL,
-  `name` char(50) NOT NULL,
+  `pseudo` char(50) NOT NULL,
   `role` char(50) NOT NULL,
   `mail` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL

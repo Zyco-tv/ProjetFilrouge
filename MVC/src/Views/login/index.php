@@ -2,64 +2,49 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>Eole</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-  <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,100' rel='stylesheet' type='text/css'><link rel="stylesheet" href="./style.css">
+  <title>Register</title>
+  <link rel="stylesheet" href="css/login.css">
 
 </head>
 <body>
 <!-- partial:index.partial.html -->
-<body>
-
-  <div class="container">
-    <div class="backbox">
-      <div class="loginMsg">
-        <div class="textcontent">
-          <p class="title">Tu n'as pas de compte ?</p>
-          <p>Tu peux t'inscrire.</p>
-          <button id="switch1">Inscription</button>
-        </div>
-      </div>
-      <div class="signupMsg visibility">
-        <div class="textcontent">
-          <p class="title">Tu as deja un compte?</p>
-          <p>Alors tu peux te connecter.</p>
-          <button id="switch2">Connection</button>
-        </div>
-      </div>
-    </div>
-    <!-- backbox -->
-
-    <div class="frontbox">
-      <div class="login">
-        <h2>Connection</h2>
-        <div class="inputbox">
-          <input type="text" name="email" placeholder="email">
-          <input type="password" name="password" placeholder="mot de passe">
-        </div>
-        <p>Mot de passe oublié?</p>
-        <button>Connection</button>
-      </div>
-
-      <div class="signup hide">
-        <h2>Inscription</h2>
-        <div class="inputbox">
-          <input type="text" name="fullname" placeholder="pseudo">
-          <input type="text" name="email" placeholder="email">
-          <input type="password" name="password" placeholder="mot de passe">
-        </div>
-        <button>Inscription</button>
-      </div>
-
-    </div>
-    <!-- frontbox -->
-  </div>
-</body>
-
-</html>
+<div class="wrapper">
+	<div class="container">
+		<h1>Bienvenue</h1>
+		
+    <form class="form" method="POST" action="/register">
+      <input name="pseudo" type="text" placeholder="Pseudo" value="<?php echo isset($_SESSION["old"]["pseudo"]) ? $_SESSION["old"]["pseudo"] : ""; ?>">
+      <span class="text-red-500"><?php echo isset($_SESSION["errors"]["pseudo"]) ? $_SESSION["errors"]["pseudo"] : "";?></span>
+      <input name="mail" type="text" placeholder="Mail" value="<?php echo isset($_SESSION["old"]["mail"]) ? $_SESSION["old"]["mail"] : "";?>">
+      <span class="text-red-500"><?php echo isset($_SESSION["errors"]["mail"]) ? $_SESSION["errors"]["mail"] : "";?></span>
+      <input name="password" type="password" placeholder="Password" value="<?php echo isset($_SESSION["old"]["password"]) ? $_SESSION["old"]["password"] : "";?>">
+      <span class="red"><?php echo isset($_SESSION["errors"]["password"]) ? $_SESSION["errors"]["password"] : ""?></span>
+      <input name="confirm" type="password" placeholder="confirm password" value="<?php echo isset($_SESSION["old"]["confirm"]) ? $_SESSION["old"]["confirm"] : "";?>">
+      <span class="red"><?php echo isset($_SESSION["errors"]["confirm"]) ? $_SESSION["errors"]["confirm"] : "" ?></span>
+			<button type="submit" id="login-button">Login</button>
+		</form>
+	</div>
+	
+	<ul class="bg-bubbles">
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+</div>
 <!-- partial -->
-  <script  src="./script.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./script.js"></script>
 
 </body>
 </html>
+
+
+<?php 
+unset($_SESSION["errors"]);
+unset($_SESSION["old"]);

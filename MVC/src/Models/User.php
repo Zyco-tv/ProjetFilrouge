@@ -12,7 +12,7 @@ class User {
         return $this->email;
     }
     public function getPseudo(){
-        return $this->pseudo;
+        return $this->name;
     }
     public function getPassword(){
         return $this->password;
