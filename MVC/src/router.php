@@ -18,6 +18,7 @@ class Router {
     public function run() {
         $controllerUser = new UserController();
         $controllerApp = new AppController();
+        $controllerAdmin = new AdminController();
 
         if ($this->url=='/' && $this->method == 'GET') {
             $controllerApp->home();
@@ -33,6 +34,24 @@ class Router {
         }
         else if ($this->url == '/login' && $this->method == 'POST') {
             $controllerUser->login();
+        }
+        else if ($this->url == '/Dashboard' && $this->method == 'GET') {
+            $controllerAdmin->adminDashboard();
+        }
+        else if ($this->url == '/Dashboard/Signalement' && $this->method == 'GET') {
+            $controllerAdmin->ReportApplication();
+        }
+        else if ($this->url == '/Dashboard/Article' && $this->method == 'GET') {
+            $controllerAdmin->ArticleApplication();
+        }
+        else if ($this->url == '/Dashboard/User' && $this->method == 'GET') {
+            $controllerAdmin->UserApplication();
+        }
+        else if (preg_match('#^\/Dashboard\/User\/([0-9]+)$#',$this->url, $matches) && $this->method == 'POST'){
+            $controllerAdmin->EditeApplication($matches[1]);
+        }
+        else if (preg_match('#^\/Dashboard\/User\/([0-9]+)$#',$this->url, $matches) && $this->method == 'GET'){
+            $controllerAdmin->EditeApplication($matches[1]);
         }
         else if ($this->url == '/article' && $this->method == 'GET') {
             $controllerApp->homeArticle();
