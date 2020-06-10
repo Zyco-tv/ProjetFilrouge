@@ -14,16 +14,20 @@
                 parent::__construct();
 
                 // if (!isset($_SESSION['user'])) {
-                //     $this->redirect('/');
+                //     $this->redirect('/login');
                 // }
             }
- 
+
             public function home() {
                 require VIEW .'HomePage/index.php';
             }
             public function homeArticle() {
                 $articles = $this->manager->allarticle();
                 require VIEW .'blog/blog-home.php';
+            }
+            public function homeArticleLog() {
+                $articles = $this->manager->allarticle();
+                require VIEW .'blog/blog-home-log.php';
             }
             
             public function show($id_article)
@@ -87,11 +91,18 @@
             if ($this->validator->errors()) {
                 $_SESSION["errors"] = $this->validator->errors();
                 
-                $this->redirect('/edite');
+                $this->redirect('/edit');
             } else {
-                $this->manager->updateProjet($id);
-                $this->redirect('/edite');
+                $this->manager->updateArticle($id);
+                $this->redirect('/edit');
             }
+        }
+
+        public function showArticle($id)
+        {
+            $article = $this->manager->find($id);
+
+            require VIEW .'blog/edite-blog.php';
         }
 
         public function ajoutArticle()
@@ -142,9 +153,7 @@
             $this->redirect('/Dashboard/User');
         }
         
-        
         // public function pageror() {
         //     require VIEW .'404.php';
         // }
-
     }

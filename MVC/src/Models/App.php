@@ -34,11 +34,8 @@ class App {
     public function getContent(){
         return $this->content;
     }
-<<<<<<< HEAD
 
-=======
     public function getId(){
         return $this->id_user;
     }
->>>>>>> 646a85dc2d21ecf00134803a353fcc0d236357e9
 }

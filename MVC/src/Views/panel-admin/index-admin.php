@@ -103,7 +103,7 @@ $(function() {
                             <td><?php echo $archive->getId();?></td>
                             <td><a href="#"><?php echo $archive->getName();?></a></td>
                             <td><a href="#"><?php echo $archive->getDate();?></a></td>
-                            <td><?php echo $archive->getMail();?></td>                        
+                            <td><?php echo $archive->getMail();?></td>
                             <td>
                                 <a href="" class="settings" title="Settings" data-toggle="tooltip"><i class="material-icons">&#xE8B8;</i></a>
                                 <a href="" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE5C9;</i></a>

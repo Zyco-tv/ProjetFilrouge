@@ -56,10 +56,10 @@ class Router {
         else if ($this->url == '/article' && $this->method == 'GET') {
             $controllerApp->homeArticle();
         }
-        else if ($this->url == '/article/creat' && $this->method == 'GET') {
+        else if ($this->url == '/article/create' && $this->method == 'GET') {
             $controllerApp->showCreat();
         }
-        else if ($this->url == '/article/creat' && $this->method == 'POST') {
+        else if ($this->url == '/article/create' && $this->method == 'POST') {
             $controllerApp->ajoutArticle();
         }
         else if (preg_match('#^\/article\/([0-9]+)$#',$this->url, $matches) && $this->method == 'GET'){
@@ -74,13 +74,13 @@ class Router {
         else if (preg_match('#^\/article\/commentaire\/([0-9]+)$#',$this->url, $matches) && $this->method == 'POST'){
             $controllerApp->editeCommentaire($matches[1]);
         }
-        else if (preg_match('#^\/article\/edite\/([0-9]+)$#',$this->url, $matches) && $this->method == 'GET'){
+        else if (preg_match('#^\/article\/edit\/([0-9]+)$#',$this->url, $matches) && $this->method == 'GET'){
+            $controllerApp->showArticle($matches[1]);
+        }
+        else if (preg_match('#^\/article\/edit\/([0-9]+)$#',$this->url, $matches) && $this->method == 'POST'){
             $controllerApp->editeArticle($matches[1]);
         }
-        else if (preg_match('#^\/article\/edite\/([0-9]+)$#',$this->url, $matches) && $this->method == 'POST'){
-            $controllerApp->editeArticle($matches[1]);
-        }
-        else if (preg_match('#^\/article\/edite\/delete\/([0-9]+)$#',$this->url, $matches) && $this->method == 'POST'){
+        else if (preg_match('#^\/article\/edit\/delete\/([0-9]+)$#',$this->url, $matches) && $this->method == 'POST'){
             $controllerApp->deleteArticle($matches[1]);
         }
         else if (preg_match('#^\/article\/commentaire\/delete\/([0-9]+)$#',$this->url, $matches) && $this->method == 'POST'){
