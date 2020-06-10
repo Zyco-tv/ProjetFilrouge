@@ -66,11 +66,11 @@ class AppManager {
 
     public function updateArticle($id)
     {
-        $req = $this->pdo->prepare('UPDATE article SET titre = :titre, content = :content WHERE id = :id');
+        $req = $this->pdo->prepare('UPDATE article SET title = :title, content = :content WHERE id_article = :id_article');
         $req->execute(array(
-            "titre" => $_POST["titre"],
+            "title" => $_POST["title"],
             "content" => $_POST["content"],
-            "id" => $id
+            "id_article" => $id
         ));
     }
 
@@ -99,13 +99,39 @@ class AppManager {
             "id" => $id
         ));
     }
+
+    public function deleteUser($id_user)
+    {
+        $req = $this->pdo->prepare('DELETE FROM user WHERE id_user = :id_user');
+        $req->execute(array(
+            "id_user" => $id_user
+        ));
+    }
+
+    public function editUser($id_user)
+    {
+        $req = $this->pdo->prepare('UPDATE user SET pseudo = :pseudo, mail = :mail WHERE id_user = :id_user');
+        $req->execute(array(
+            "pseudo" => $_POST["pseudo"],
+            "mail" => $_POST["mail"],
+            "id_user" => $id_user
+        ));
+    }
+    public function showUser($id_user)
+    {
+        $req = $this->pdo->prepare('SELECT * FROM user WHERE id_user = :id_user');
+        $req->execute(array(
+            "id_user" => $id_user
+        ));
+        $req->setFetchMode(\PDO::FETCH_CLASS, 'App\Models\App');
+        return $req->fetch();
+    }
     public function deleteArticle($id)
     {
         $req = $this->pdo->prepare('DELETE FROM article WHERE id_user = :id_user');
         $req->execute(array(
             "id" => $id
         ));
-        
     }
 
     public function find($id_article){

@@ -83,18 +83,18 @@
         public function editeArticle($id)
         {
             $this->validator->validate([
-                'titre' => ['required'],
-                'contenue' => ['required'],
-                'url' => ['required']
+                'title' => ['required'],
+                'content' => ['required'],
+                'img' => ['required']
             ]);
             $_SESSION["old"] = $_POST;
             if ($this->validator->errors()) {
                 $_SESSION["errors"] = $this->validator->errors();
                 
-                $this->redirect('/edit');
+                $this->redirect('/article//edit');
             } else {
                 $this->manager->updateArticle($id);
-                $this->redirect('/edit');
+                $this->redirect('/article');
             }
         }
 

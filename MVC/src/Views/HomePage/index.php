@@ -52,7 +52,7 @@
               <a class="nav-link js-scroll-trigger" href="#signup">Contact</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="/article">Blog</a>
+              <a class="nav-link js-scroll-trigger" href="blog-home-1.html">Blog</a>
             </li>
           </ul>
         </div>
@@ -66,11 +66,11 @@
           <h1 class="mx-auto my-0 text-uppercase">Dans le vent</h1>
           <h2 class="text-grey mx-auto mt-5 mb-5">Projet fils rouge 2019-2020 Edenschool France</h2>
           <div>
-            <img src="img/eolienne.png" alt="eolienne" class="full"/>
+            <img src="img/eolienne.png" alt="eolienne" class="full d-none d-xl-block"/>
           </div>
-	  <div id="scroll">
-	    <a href="#about" class="js-scroll-trigger"><span></span></a>
-	  </div>
+    <div id="scroll">
+      <a href="#about" class="js-scroll-trigger"><span></span></a>
+    </div>
         </div>
       </div>
     </header>
@@ -97,12 +97,12 @@ Notre mission est simple nous devions crée une éolienne pour pouvoir charger n
     <section id="projects" class="projects-section bg-light">
       <div class="container">
 
-	<!-- Title -->
+  <!-- Title -->
         <div class="row">
           <div class="col-lg-8 mt-0 mx-auto mb-5">
             <h2 class="text-black-50 text-center mb-3">Les dérives</h2>
           </div>
-	</div>
+  </div>
 
 
         <!-- Featured Project Row -->
@@ -126,20 +126,23 @@ Notre mission est simple nous devions crée une éolienne pour pouvoir charger n
     <section id="actions" class="projects-section bg-white">
       <div class="container">
 
-	<!-- Title -->
+  <!-- Title -->
         <div class="row">
           <div class="col-lg-8 mt-0 mx-auto mb-5">
             <h2 class="text-black-50 text-center mb-3">Conception</h2>
           </div>
-	</div>
+  </div>
 
-	<!-- First One Row -->		
+  <!-- First One Row -->    
   <section class="o-section">
     <div class="c-hotspot-image">
       <div class="c-hotspot-image__visual">
-        <img class="shema"
-          src="https://cdn.discordapp.com/attachments/692286899343065099/710404683012898836/1200px-Schema_eolienne.svg.png"
-          alt="">
+          <picture>
+            <source srcset="https://cdn.discordapp.com/attachments/692286899343065099/710404683012898836/1200px-Schema_eolienne.svg.png" media="(min-width: 1300px)"/>
+            <source srcset="img/shemaEOLE.png" media="(min-width: 480px)"/>
+            <img src="img/shemaEOLE.png" alt="e"/>
+
+          </picture>
       </div>
       <div class="c-hotspot-image__hotspots js-hotspot-container">
         <!-- HOTSPOT -->
@@ -243,7 +246,7 @@ Notre mission est simple nous devions crée une éolienne pour pouvoir charger n
     <section id="projects" class="projects-section bg-light">
       <div class="container">
 
-	<!-- Title -->
+  <!-- Title -->
         <div class="row">
           <div class="col-lg-8 mt-0 mx-auto mb-5">
             <h2 class="text-black-50 text-center mb-3">Journal de bord</h2>
@@ -289,7 +292,7 @@ Notre mission est simple nous devions crée une éolienne pour pouvoir charger n
               </ol>
             </div>
           </div>
-	</div>
+  </div>
 
 
         <!-- Featured Project Row -->

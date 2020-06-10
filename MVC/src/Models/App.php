@@ -10,6 +10,7 @@ class App {
     private $img;
     private $title;
     private $content;
+    private $name;
     private $id_user;
     
 
@@ -38,4 +39,6 @@ class App {
     public function getId(){
         return $this->id_user;
     }
+    
+
 }

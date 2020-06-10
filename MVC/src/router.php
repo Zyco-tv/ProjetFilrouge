@@ -53,6 +53,18 @@ class Router {
         else if (preg_match('#^\/Dashboard\/User\/([0-9]+)$#',$this->url, $matches) && $this->method == 'GET'){
             $controllerAdmin->EditeApplication($matches[1]);
         }
+        else if (preg_match('#^\/Dashboard\/User\/([a-z0-9A-Z-]+)\/delete$#' ,$this->url, $matches) && $this->method == 'GET') {
+            $controllerAdmin = new AdminController();
+            $controllerAdmin->DeleteUser($matches[1]);
+        }
+        else if (preg_match('#^\/Dashboard\/User\/([a-z0-9A-Z-]+)\/edit\/done$#' ,$this->url, $matches) && $this->method == 'POST') {
+            $controllerAdmin = new AdminController();
+            $controllerAdmin->EditUser($matches[1]);
+        }
+        else if (preg_match('#^\/Dashboard\/User\/([a-z0-9A-Z-]+)\/edit$#' ,$this->url, $matches) && $this->method == 'GET') {
+            $controllerAdmin = new AdminController();
+            $controllerAdmin->ShowUser($matches[1]);
+        }
         else if ($this->url == '/article' && $this->method == 'GET') {
             $controllerApp->homeArticle();
         }
@@ -78,6 +90,7 @@ class Router {
             $controllerApp->showArticle($matches[1]);
         }
         else if (preg_match('#^\/article\/edit\/([0-9]+)$#',$this->url, $matches) && $this->method == 'POST'){
+
             $controllerApp->editeArticle($matches[1]);
         }
         else if (preg_match('#^\/article\/edit\/delete\/([0-9]+)$#',$this->url, $matches) && $this->method == 'POST'){
