@@ -12,7 +12,8 @@ class App {
     private $content;
     private $name;
     private $id_user;
-    
+    private $id_article;
+    private $text;
 
 
 
@@ -39,6 +40,18 @@ class App {
     public function getId(){
         return $this->id_user;
     }
+
+    public function getIdArticle(){
+        return $this->id_article;
+    }
+
+    public function getText(){
+        return $this->text;
+    } 
+
+
+
+
     
 
 }

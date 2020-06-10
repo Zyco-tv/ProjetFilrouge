@@ -93,37 +93,34 @@
         <hr>
 
         <!-- Comments Form -->
-        <form action="" method="post">
+
+        <form action="/article/comment/<?= $article ["id_article"]?>" method="post">
         <div class="card my-4">
           <h5 class="card-header">Mettre un commentaire:</h5>
           <div class="card-body">
             <form>
               <div class="form-group">
-                <textarea class="form-control" rows="3"></textarea>
+                <textarea class="form-control" rows="3" name="text"></textarea>
               </div>
-              <button type="submit" class="btn txt eole">Envoyer</button>
+              <button type="submit" name="submit" class="btn txt eole">Envoyer</button>
             </form>
           </div>
         </div>
         </form>
 
         <!-- Single Comment -->
+        <?php foreach ($articles as $article) { ?>
         <div class="media mb-4">
           <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
           <div class="media-body">
             <h5 class="mt-0">Pseudo</h5>
-            Hey trop bien ton article t trop fort 😀
+            <?php echo $article->getText();?>
             </div>
         </div>
+        <?php } ?>
 
         <!-- Comment with nested comments -->
-        <div class="media mb-4">
-          <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
-          <div class="media-body">
-            <h5 class="mt-0">Pseudo</h5>
-            J'ai bien aimer le petit topic, c'etait cool continue comme sa bg 😏
-          </div>
-        </div>
+      
 
       </div>
 

@@ -41,6 +41,11 @@
                 $article = $this->manager->find($id_article);
                 require VIEW.'blog/blog-post.php';
             }
+            public function showComment($id_article)
+            {
+                $article = $this->manager->findComment($id_article);
+            }
+            
         
             // public function showProfil($user) {
             //     $profil = $this->manager->find($user);
@@ -104,13 +109,6 @@
             }
         }
 
-        public function showArticle($id)
-        {
-            $article = $this->manager->find($id);
-
-            require VIEW .'blog/edite-blog.php';
-        }
-
         public function ajoutArticle()
         {
             $this->validator->validate([
@@ -134,20 +132,10 @@
             require VIEW .'blog/create.php';
         }
 
-        public function ajoutCommentaire()
+        public function ajoutCommentaire($id_article)
         {
-            $this->validator->validate([
-                'text' => ['required']
-            ]);
-            $_SESSION["old"] = $_POST;
-            if ($this->validator->errors()) {
-                $_SESSION["errors"] = $this->validator->errors();
-
-                $this->redirect('/edite');
-            } else {
-                $this->manager->addCompetence();
-                $this->redirect('/edite');
-            }
+            $this->manager->addCommentaire($id_article);
+            $this->redirect("/article/$id_article");
         }
 
         public function deleteCommentaire($id) {
