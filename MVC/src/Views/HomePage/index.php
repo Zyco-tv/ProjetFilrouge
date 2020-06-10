@@ -52,7 +52,7 @@
               <a class="nav-link js-scroll-trigger" href="#signup">Contact</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="blog-home-1.html">Blog</a>
+              <a class="nav-link js-scroll-trigger" href="/article">Blog</a>
             </li>
           </ul>
         </div>
