@@ -14,9 +14,17 @@
   <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Custom styles for this template -->
-
+  <link rel="stylesheet" href="https://spirit-tv.github.io/panel-admin.io/boostrap.min.css">
+<link rel="stylesheet" href="https://spirit-tv.github.io/panel-admin.io/style.css">
 
 </head>
+
+<style>
+.card{
+  margin-left:0px;
+  width: 100%;
+}
+</style>
 
 <body>
 
@@ -30,14 +38,9 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="faq.html">FAQ</a>
+            <a class="nav-link" href="/login">Deconnexion</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="services.html"></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
-          </li>  
+          
         </ul>
       </div>
     </div>
@@ -87,6 +90,7 @@
         <hr>
 
         <!-- Comments Form -->
+        <form action="" method="post">
         <div class="card my-4">
           <h5 class="card-header">Mettre un commentaire:</h5>
           <div class="card-body">
@@ -98,6 +102,7 @@
             </form>
           </div>
         </div>
+        </form>
 
         <!-- Single Comment -->
         <div class="media mb-4">
