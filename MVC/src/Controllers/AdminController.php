@@ -33,9 +33,14 @@ use App\Models\UserManager;
             public function EditUser($id_user)
             {
                 $this->manager->editUser($id_user);
+                $this->redirect('/Dashboard/User');
+            }
+            public function ShowUser($id_user)
+            {
+                $profil = $this->manager->showUser($id_user);
                 require VIEW.'panel-admin/edite-admin.php';
             }
-
+            
             public function ReportApplication()
             {
                 // $archives = $this->manager->all();

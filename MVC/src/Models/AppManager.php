@@ -113,13 +113,20 @@ class AppManager {
     {
         $req = $this->pdo->prepare('UPDATE user SET pseudo = :pseudo, mail = :mail WHERE id_user = :id_user');
         $req->execute(array(
-            "pseudo" => $pseudo,
-            "mail" => $mail,
+            "pseudo" => $_POST["pseudo"],
+            "mail" => $_POST["mail"],
             "id_user" => $id_user
         ));
     }
-
-
+    public function showUser($id_user)
+    {
+        $req = $this->pdo->prepare('SELECT * FROM user WHERE id_user = :id_user');
+        $req->execute(array(
+            "id_user" => $id_user
+        ));
+        $req->setFetchMode(\PDO::FETCH_CLASS, 'App\Models\App');
+         return $req->fetch();
+    }
     public function deleteArticle($id)
     {
         $req = $this->pdo->prepare('DELETE FROM article WHERE id_user = :id_user');

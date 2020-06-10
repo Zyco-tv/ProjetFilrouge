@@ -57,9 +57,13 @@ class Router {
             $controllerAdmin = new AdminController();
             $controllerAdmin->DeleteUser($matches[1]);
         }
-        else if (preg_match('#^\/Dashboard\/User\/([a-z0-9A-Z-]+)\/edit$#' ,$this->url, $matches) && $this->method == 'GET') {
+        else if (preg_match('#^\/Dashboard\/User\/([a-z0-9A-Z-]+)\/edit\/done$#' ,$this->url, $matches) && $this->method == 'POST') {
             $controllerAdmin = new AdminController();
             $controllerAdmin->EditUser($matches[1]);
+        }
+        else if (preg_match('#^\/Dashboard\/User\/([a-z0-9A-Z-]+)\/edit$#' ,$this->url, $matches) && $this->method == 'GET') {
+            $controllerAdmin = new AdminController();
+            $controllerAdmin->ShowUser($matches[1]);
         }
         else if ($this->url == '/article' && $this->method == 'GET') {
             $controllerApp->homeArticle();
