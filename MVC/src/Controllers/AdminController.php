@@ -24,12 +24,17 @@ use App\Models\UserManager;
                 require VIEW.'panel-admin/home-admin.php';
             }
 
-            public function EditeApplication($name)
+            public function DeleteUser($id_user)
             {
-                $candidature = $this->manager->find($name);
-                require VIEW.'panel-admin/edite-admin.php';
+                $this->manager->deleteUser($id_user);
+                $this->redirect('/Dashboard/User');
             }
 
+            public function EditUser($id_user)
+            {
+                $this->manager->editUser($id_user);
+                require VIEW.'panel-admin/edite-admin.php';
+            }
 
             public function ReportApplication()
             {

@@ -78,39 +78,15 @@ $(function() {
             
             <form class="form-horizontal" role="form">
               <div class="form-group">
-                <label class="col-lg-3 control-label">Nom:</label>
+                <label class="col-lg-3 control-label">Pseudo:</label>
                 <div class="col-lg-8">
                   <input class="form-control" type="text" value="Tom">
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="col-lg-3 control-label">Prenom:</label>
-                <div class="col-lg-8">
-                  <input class="form-control" type="text" value="Litaudon">
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-lg-3 control-label">Email:</label>
                 <div class="col-lg-8">
                   <input class="form-control" type="text" value="tlitaudon@gmail.com">
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="col-md-3 control-label">Pseudo:</label>
-                <div class="col-md-8">
-                  <input class="form-control" type="text" value="Spirit_TV">
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="col-md-3 control-label">Password:</label>
-                <div class="col-md-8">
-                  <input class="form-control" type="password" value="11111122333">
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="col-md-3 control-label">Confirm password:</label>
-                <div class="col-md-8">
-                  <input class="form-control" type="password" value="11111122333">
                 </div>
               </div>
               <div class="form-group">

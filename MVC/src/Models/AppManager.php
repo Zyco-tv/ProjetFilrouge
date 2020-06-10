@@ -96,15 +96,32 @@ class AppManager {
             "id" => $id
         ));
     }
+
+    public function deleteUser($id_user)
+    {
+        $req = $this->pdo->prepare('DELETE FROM user WHERE id_user = :id_user');
+        $req->execute(array(
+            "id_user" => $id_user
+        ));
+    }
+
+    public function editUser($id_user)
+    {
+        $req = $this->pdo->prepare('UPDATE user SET pseudo = :pseudo, mail = :mail WHERE id_user = :id_user');
+        $req->execute(array(
+            "pseudo" => $pseudo,
+            "mail" => $mail,
+            "id_user" => $id_user
+        ));
+    }
+
+
     public function deleteArticle($id)
     {
         $req = $this->pdo->prepare('DELETE FROM article WHERE id_user = :id_user');
         $req->execute(array(
             "id" => $id
         ));
-
-
-        
     }
 
 }

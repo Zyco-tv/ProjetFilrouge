@@ -10,6 +10,7 @@ class App {
     private $img;
     private $title;
     private $content;
+    private $name;
     private $id_user;
     
 

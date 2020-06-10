@@ -105,8 +105,8 @@ $(function() {
                             <td><a href="#"><?php echo $archive->getDate();?></a></td>
                             <td><?php echo $archive->getMail();?></td>                        
                             <td>
-                                <a href="" class="settings" title="Settings" data-toggle="tooltip"><i class="material-icons">&#xE8B8;</i></a>
-                                <a href="" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE5C9;</i></a>
+                                <a href="/Dashboard/User/<?php echo $archive->getId();?>/edit" class="settings" title="Settings" data-toggle="tooltip"><i class="material-icons">&#xE8B8;</i></a>
+                                <a href="/Dashboard/User/<?php echo $archive->getId();?>/delete" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE5C9;</i></a>
                             </td>
                         </tr>
                         <?php } ?>
