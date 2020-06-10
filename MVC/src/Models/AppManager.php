@@ -76,7 +76,6 @@ class AppManager {
 
     public function addArticle(){
         $request = $this->pdo->prepare('INSERT INTO article (title,img,content,id_user) VALUES (:title,:img,:content,:id_user)' );
-        //var_dump($request);
         $request->execute([
             "title" => $_POST["title"],
             "img" => $_POST['img'],

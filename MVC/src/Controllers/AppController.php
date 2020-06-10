@@ -25,7 +25,10 @@
                 $articles = $this->manager->allarticle();
                 require VIEW .'blog/blog-home.php';
             }
-            
+            public function homeArticleconnect() {
+                $articles = $this->manager->allarticle();
+                require VIEW .'blog/blog-home-connect.php';
+            }            
             public function show($id_article)
             {
                 $article = $this->manager->find($id_article);

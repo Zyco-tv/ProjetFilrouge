@@ -68,6 +68,9 @@ class Router {
         else if ($this->url == '/article' && $this->method == 'GET') {
             $controllerApp->homeArticle();
         }
+        else if ($this->url == '/blog' && $this->method == 'GET') {
+            $controllerApp->homeArticleconnect();
+        }
         else if ($this->url == '/article/creat' && $this->method == 'GET') {
             $controllerApp->showCreat();
         }

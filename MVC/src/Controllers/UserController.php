@@ -69,7 +69,7 @@
                 
                 
                 $_SESSION["user"] = $user;
-                $this->redirect('/article');
+                $this->redirect('/blog');
             }
 
             public function showRegister() {
