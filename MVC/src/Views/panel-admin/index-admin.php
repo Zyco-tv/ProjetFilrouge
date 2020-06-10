@@ -98,59 +98,22 @@ $(function() {
         
                     <?php foreach ($archives as $archive) { ?>
                         
+                        
                         <tr>
-                            <td>1</td>
+                            <td><?php echo $archive->getId();?></td>
                             <td><a href="#"><?php echo $archive->getName();?></a></td>
                             <td><a href="#"><?php echo $archive->getDate();?></a></td>
                             <td><?php echo $archive->getMail();?></td>                        
                             <td>
-                                <a href="#" class="settings" title="Settings" data-toggle="tooltip"><i class="material-icons">&#xE8B8;</i></a>
-                                <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE5C9;</i></a>
+                                <a href="" class="settings" title="Settings" data-toggle="tooltip"><i class="material-icons">&#xE8B8;</i></a>
+                                <a href="" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE5C9;</i></a>
                             </td>
                         </tr>
                         <?php } ?>
-                        <!-- <tr>
-                            <td>2</td>
-                            <td><a href="#">Hassen</a></td>
-                            <td>05/08/2014</td>                       
-                            <td>user</td>
-    
-                            <td>
-                                <a href="#" class="settings" title="Settings" data-toggle="tooltip"><i class="material-icons">&#xE8B8;</i></a>
-                                <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE5C9;</i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td><a href="#">Alann</a></td>
-                            <td>11/05/2015</td>
-                            <td>Rédacteur</td>                 
-                            <td>
-                                <a href="#" class="settings" title="Settings" data-toggle="tooltip"><i class="material-icons">&#xE8B8;</i></a>
-                                <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE5C9;</i></a>
-                            </td>                        
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td><a href="#">Tom</a></td>
-                            <td>06/09/2016</td>
-                            <td>Admin</td>
-    
-                            <td>
-                                <a href="#" class="settings" title="Settings" data-toggle="tooltip"><i class="material-icons">&#xE8B8;</i></a>
-                                <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE5C9;</i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td><a href="#">jean louis</a></td>
-                            <td>12/08/2017</td>                        
-                            <td>Rédacteur</td>
-                            <td>
-                                <a href="#" class="settings" title="settings" data-toggle="tooltip"><i class="material-icons">&#xE8B8;</i></a>
-                                <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE5C9;</i></a>
-                            </td>
-                        </tr> -->
+                        
+
+
+
                     </tbody>
                 </table>
                 <div class="clearfix">

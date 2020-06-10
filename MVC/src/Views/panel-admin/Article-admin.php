@@ -75,7 +75,7 @@ $(function() {
                 <div class="card-img" style="background-image:url(<?php echo $archive->getImg();?>);">
                     <div class="overlay">
                         <div class="overlay-content">
-                            <a class="" href="#!">Voir le projet</a>
+                            <a class="" href="#!">Voir le Contenue</a>
                         </div>
                     </div>
                 </div>

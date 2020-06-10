@@ -19,7 +19,8 @@ use App\Models\UserManager;
 
             public function adminDashboard()
             {
-                // $candidates = $this->manager->all();
+                $archives = $this->manager->alldash();
+                $utilisateurs = $this->manager->alluser();
                 require VIEW.'panel-admin/home-admin.php';
             }
 
@@ -28,6 +29,7 @@ use App\Models\UserManager;
                 $candidature = $this->manager->find($name);
                 require VIEW.'panel-admin/edite-admin.php';
             }
+
 
             public function ReportApplication()
             {

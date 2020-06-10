@@ -70,29 +70,17 @@ $(function() {
           <hr>
           <h2>Dernier articles</h2>
         <div class="row">
-            
+        <?php foreach ($archives as $archive) { ?>
             <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
                 <div class="card-header">Date de l'article</div>
                 <div class="card-body">
-                  <h5 class="card-title">Titre de l'article</h5>
-                  <p class="card-text">Debut de l'article ...</p>
+                  <h5 class="card-title"><?php echo $archive->getTitle();?></h5>
+                  <p class="card-text"><?php echo $archive->getContent();?></p>
                 </div>
               </div>
-              <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
-                <div class="card-header">Date de l'article</div>
-                <div class="card-body">
-                  <h5 class="card-title">Titre de l'article</h5>
-                  <p class="card-text">Debut de l'article ...</p>
-                </div>
-              </div>
-              <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
-                <div class="card-header">Date de l'article</div>
-                <div class="card-body">
-                  <h5 class="card-title">Titre de l'article</h5>
-                  <p class="card-text">Debut de l'article ...</p>
-                </div>
-              </div>
-          </div>
+             
+            </div>
+          <?php } ?>
       <hr>
       <h2>Dernier Signalement</h2>
         <div class="row">
@@ -143,43 +131,23 @@ $(function() {
         <div class="row">
             <div class="col-md-12">
                 <table class="table table-striped">
+                
                     <tr class="table-header">
-                      <th class="cell">ID</th>
+                        <th class="cell">ID</th>
                         <th class="cell">Name</th>
-                        <th class="cell">Username</th>
-                        <th class="cell">Email</th>
+                        <th class="cell">Mail</th>
+                        <th class="cell">Date</th>
                     </tr>
+                    
+                    <?php foreach ($utilisateurs as $utilisateur) { ?>
                     <tr  class="active">
-                        <td>1</td>
-                        <td>Smith</td>
-                        <td>Smith Mark</td>
-                        <td>mark@gmail.com</td>
+                        <td><?php echo $archive->getId();?></td>
+                        <td><?php echo $utilisateur->getName();?></td>
+                        <td><?php echo $utilisateur->getMail();?></td>
+                        <td><?php echo $utilisateur->getDate();?></td>
 
                     </tr>
-                    <tr class="success">
-                        <td>2</td>
-                        <td>Smith Mark</td>
-                        <td>Smith</td>
-                        <td>marksmith@gmail.com</td>
-                    </tr>
-                    <tr  class="active">
-                        <td>3</td>
-                        <td>Willson</td>
-                        <td>Will</td>
-                        <td>will34@gmail.com</td>
-                    </tr>
-                    <tr class="danger">
-                        <td>4</td>
-                        <td>Jacob</td>
-                        <td>Jacob Thornton</td>
-                        <td>Jacob@gmail.com</td>
-                    </tr>
-                    <tr  class="active">
-                        <td>5</td>
-                        <td>Larry</td>
-                        <td>Larry  Bird</td>
-                        <td>BirdLarry@gmail.com</td>
-                    </tr>
+                    <?php } ?>
                 </table>
             </div>
           </div>
