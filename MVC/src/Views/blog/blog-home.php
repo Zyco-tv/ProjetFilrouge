@@ -35,7 +35,7 @@
   <!-- Navigation -->
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark eole fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="index.html">Éole</a>
+      <a class="navbar-brand" href="/">Éole</a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded=" alse" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>

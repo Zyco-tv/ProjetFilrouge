@@ -13,8 +13,9 @@
   <!-- Bootstrap core CSS -->
   <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Custom styles for this template -->
-
+  <!-- Custom styles for this template -->  
+  <link rel="stylesheet" href="https://spirit-tv.github.io/panel-admin.io/boostrap.min.css">
+<link rel="stylesheet" href="https://spirit-tv.github.io/panel-admin.io/style.css">
 
 </head>
 
@@ -58,7 +59,7 @@
         <a href="index.html">Home</a>
       </li>
       <li class="breadcrumb-item">
-        <a href="blog-home-1.html">Blog</a>
+        <a href="blog-home.php">Blog</a>
       </li>
       <li class="breadcrumb-item active">Article </li>
     </ol>

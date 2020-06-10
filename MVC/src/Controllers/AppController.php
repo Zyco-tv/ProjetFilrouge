@@ -122,7 +122,7 @@
             $_SESSION["old"] = $_POST;
             if ($this->validator->errors()) {
                 $_SESSION["errors"] = $this->validator->errors();
-                $this->redirect('/article/creat');
+                $this->redirect('/article/create');
             } else {
                 $this->manager->addArticle();
                 $this->redirect('/article');
