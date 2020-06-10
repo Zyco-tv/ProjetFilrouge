@@ -85,10 +85,12 @@ class AppManager {
             return $this->pdo->lastInsertId();
     }
 
-    public function addCommentaire(){
-        $request = $this->pdo->prepare('INSERT INTO commentaire (text) VALUES (:text)' );
+    public function addCommentaire($id_article){
+        $request = $this->pdo->prepare('INSERT INTO commentaire (text,id_user,id_article) VALUES (:text,:id_user,:id_article)' );
         $request->execute([
             "text" => $_POST["text"],
+            "id_user" => $_SESSION["user"]->id_user,
+            "id_article" => $id_article
         ]);
         // return $this->pdo->lastInsertId();
     }
@@ -141,5 +143,13 @@ class AppManager {
         ]);
         return $request->fetch();
     }
+    public function findComment($id_article){
+        $request = $this->pdo->prepare('SELECT * FROM commentaire WHERE text = :text');
+        $request->execute([
+            "text" => $text
+        ]);
+        return $request->fetch();
+    }
+    
 
 }
