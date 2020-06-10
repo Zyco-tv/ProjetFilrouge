@@ -144,11 +144,12 @@ class AppManager {
         return $request->fetch();
     }
     public function findComment($id_article){
-        $request = $this->pdo->prepare('SELECT * FROM commentaire WHERE text = :text');
+        $request = $this->pdo->prepare('SELECT text,pseudo FROM commentaire INNER JOIN user USING (id_user) WHERE id_article = :id_article');
         $request->execute([
-            "text" => $text
+            "id_article" => $id_article
         ]);
-        return $request->fetch();
+        $request->setFetchMode(\PDO::FETCH_CLASS, '\App\Models\App');
+        return $request->fetchAll();
     }
     
 
