@@ -81,7 +81,6 @@ class Router {
         }
         else if (preg_match('#^\/article\/([0-9]+)$#',$this->url, $matches) && $this->method == 'GET'){
             $controllerApp->show($matches[1]);
-            $controllerApp->showComment($matches[1]);
         }
         else if (preg_match('#^\/article\/comment\/([0-9]+)$#',$this->url, $matches) && $this->method == 'POST'){
             $controllerApp->ajoutCommentaire($matches[1]);

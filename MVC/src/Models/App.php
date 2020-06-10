@@ -12,6 +12,7 @@ class App {
     private $content;
     private $name;
     private $id_user;
+    private $text;
     
 
 
@@ -38,6 +39,10 @@ class App {
 
     public function getId(){
         return $this->id_user;
+    }
+
+    public function getText(){
+        return $this->text;
     }
     
 

@@ -85,15 +85,20 @@
         <hr>
 
         <!-- Post Content -->
-        <p class="lead"><?php echo $article['content'] ?></p>
+        <p class="lead">
+        <?php echo $article['content'] ?>
+        </p>
 
         <hr>
 
+<<<<<<< HEAD
         <a href="/article/edit/<?php echo $article['id_article']?>">Modifier</a>
 
         <hr>
 
         
+=======
+>>>>>>> fc739b7c1efd0c778ecb7e118501ba66406c211e
         <!-- Comments Form -->
 
         <form action="/article/comment/<?= $article ["id_article"]?>" method="post">
@@ -109,6 +114,19 @@
           </div>
         </div>
         </form>
+
+        <!-- Single Comment -->
+        
+
+        <?php foreach ($comments as $comment) { ?>
+        <div class="media mb-4">
+          <!-- <img class="d-flex mr-3 rounded-circle" src="" alt=""> -->
+          <div class="media-body">
+            <h5 class="mt-0"><?php echo $comment->getName();?></h5>
+            <?php echo $comment->getText();?>
+            </div>
+        </div>
+        <?php } ?>
       </div>
 
       <!-- Sidebar Widgets Column -->
@@ -132,6 +150,7 @@
         <!-- Side Widget -->
 
       </div>
+
     </div>
     <!-- /.row -->
 

@@ -39,13 +39,16 @@
             public function show($id_article)
             {
                 $article = $this->manager->find($id_article);
+                $comments = $this->manager->findComment($id_article);
                 require VIEW.'blog/blog-post.php';
             }
-            public function showComment($id_article)
-            {
-                $article = $this->manager->findComment($id_article);
-                require VIEW.'blog/blog-post.php';
-            }
+            // public function showComment($id_article)
+            // {
+            //     die;
+            //     var_dump('-----------------');
+            //     $comment = $this->manager->findComment($id_article);
+            //     require VIEW.'blog/blog-post.php';
+            // }
             
         
             // public function showProfil($user) {
