@@ -27,7 +27,8 @@ class AppManager {
         $request->execute([
             "title" => $title,
             "img" => $img,
-            "content" => $content
+            "content" => $content,
+            "created_at" => $created_at
         ]);
         $request->setFetchMode(\PDO::FETCH_CLASS, '\App\Models\App');
         return $request->fetchAll();
@@ -85,6 +86,14 @@ class AppManager {
             "id" => $id
         ));
         
+    }
+
+    public function find($id_article){
+        $request = $this->pdo->prepare('SELECT * FROM article WHERE id_article = :id_article');
+        $request->execute([
+            "id_article" => $id_article
+        ]);
+        return $request->fetch();
     }
 
 }

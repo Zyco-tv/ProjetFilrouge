@@ -22,12 +22,13 @@
                 require VIEW .'HomePage/index.php';
             }
             public function homeArticle() {
+                $articles = $this->manager->allarticle();
                 require VIEW .'blog/blog-home.php';
             }
             
-            public function show($firstname)
+            public function show($id_article)
             {
-                $candidature = $this->manager->find($firstname);
+                $article = $this->manager->find($id_article);
                 require VIEW.'blog/blog-post.php';
             }
         

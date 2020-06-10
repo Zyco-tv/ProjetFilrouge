@@ -6,7 +6,7 @@ class App {
     
     private $pseudo;
     private $mail;
-    private $date_creation;
+    private $created_at;
     private $img;
     private $title;
     private $content;
@@ -14,7 +14,7 @@ class App {
 
 
     public function getDate(){
-        return $this->date_creation;
+        return $this->created_at;
     }
     public function getName(){
         return $this->pseudo;
@@ -32,4 +32,5 @@ class App {
     public function getContent(){
         return $this->content;
     }
+
 }
