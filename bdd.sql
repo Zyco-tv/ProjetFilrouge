@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jun 09, 2020 at 09:01 AM
+-- Generation Time: Jun 10, 2020 at 12:00 PM
 -- Server version: 5.7.26
 -- PHP Version: 7.3.7
 
@@ -29,6 +29,13 @@ CREATE TABLE `article` (
   `id_user` int(10) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `article`
+--
+
+INSERT INTO `article` (`id_article`, `title`, `created_at`, `img`, `content`, `id_user`) VALUES
+(1, 'test', '2020-06-10 09:39:59', 'https://image.noelshack.com/fichiers/2020/24/2/1591703070-logo.png', 'On sait depuis longtemps que travailler avec du texte lisible et contenant du sens est source de distractions, et empêche de se concentrer sur la mise en page elle-même. L\'avantage du Lorem Ipsum sur un texte générique comme \'Du texte. Du texte. Du texte.\' est qu\'il possède une distribution de lettres plus ou moins normale, et en tout cas comparable avec celle du français standard. De nombreuses suites logicielles de mise en page ou éditeurs de sites Web ont fait du Lorem Ipsum leur faux texte par défaut, et une recherche pour \'Lorem Ipsum\' vous conduira vers de nombreux sites qui n\'en sont encore qu\'à leur phase de construction. Plusieurs versions sont apparues avec le temps, parfois par accident, souvent intentionnellement (histoire d\'y rajouter de petits clins d\'oeil, voire des phrases embarassantes).\r\n\r\n', 12);
+
 -- --------------------------------------------------------
 
 --
@@ -39,7 +46,8 @@ CREATE TABLE `commentaire` (
   `id` int(10) UNSIGNED NOT NULL,
   `repost_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `text` text NOT NULL,
-  `id_user` int(11) UNSIGNED NOT NULL
+  `id_user` int(11) UNSIGNED NOT NULL,
+  `id_article` int(10) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -66,15 +74,18 @@ CREATE TABLE `user` (
   `id_user` int(10) UNSIGNED NOT NULL,
   `pseudo` char(50) NOT NULL,
   `mail` varchar(100) NOT NULL,
-  `password` varchar(100) NOT NULL
+  `password` varchar(100) NOT NULL,
+  `date_creation` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`id_user`, `pseudo`, `mail`, `password`) VALUES
-(6, 'tom', 'tlitaudon@gmail.com', '$2y$10$3a0BxcrZBt.ZkTt1muxYKetiQdanqPV0qrYKVjxuL5MrgGpU06gJa');
+INSERT INTO `user` (`id_user`, `pseudo`, `mail`, `password`, `date_creation`) VALUES
+(10, 'ezrzgjjkkkghjhg', 'kkkzaert@gmail.com', '$2y$10$F98GmhtmaUkUT/fQCLtKduHbnozSrvnY7Nq8a2eSNMrFtJGwhV64.', '2020-06-10 07:45:34'),
+(11, 'ghgfdsdfhgfd', 'zgsqdsdqfsdg@gmail.com', '$2y$10$/XmtEElArpQg4cuA8.ypuuK80YIXW2wnXtRqgZnkdXSJhpo8oOS1S', '2020-06-10 07:45:50'),
+(12, 'Tom', 'tlitaudon@gmail.com', '$2y$10$u5FuCTimovMmvaOPpNX6j.BvmmHS.U8Kbf1kQtmfU7CtDowQXYkKe', '2020-06-10 09:36:49');
 
 --
 -- Indexes for dumped tables
@@ -93,7 +104,8 @@ ALTER TABLE `article`
 --
 ALTER TABLE `commentaire`
   ADD UNIQUE KEY `id` (`id`),
-  ADD KEY `fk_id_user_comment` (`id_user`);
+  ADD KEY `fk_id_user_comment` (`id_user`),
+  ADD KEY `f_id_article` (`id_article`);
 
 --
 -- Indexes for table `report`
@@ -118,7 +130,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `article`
 --
 ALTER TABLE `article`
-  MODIFY `id_article` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id_article` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `commentaire`
@@ -136,7 +148,7 @@ ALTER TABLE `report`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_user` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- Constraints for dumped tables
@@ -152,6 +164,7 @@ ALTER TABLE `article`
 -- Constraints for table `commentaire`
 --
 ALTER TABLE `commentaire`
+  ADD CONSTRAINT `f_id_article` FOREIGN KEY (`id_article`) REFERENCES `article` (`id_article`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `fk_id_user_comment` FOREIGN KEY (`id_user`) REFERENCES `user` (`id_user`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --

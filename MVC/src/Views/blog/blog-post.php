@@ -19,26 +19,31 @@
 
 </head>
 
+<style>
+.card{
+  margin-left:0px;
+  width: 100%;
+}
+</style>
+
 <body>
 
   <!-- Navigation -->
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark eole fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="index.html">Éole</a>
+      <a class="navbar-brand" href="/article">Éole</a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="faq.html">FAQ</a>
+        <li class="nav-item">
+            <a class="nav-link" href="/article/create">Créer un article</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="services.html"></a>
+            <a class="nav-link" href="/login">Deconnexion</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
-          </li>  
+          
         </ul>
       </div>
     </div>
@@ -88,6 +93,7 @@
         <hr>
 
         <!-- Comments Form -->
+        <form action="" method="post">
         <div class="card my-4">
           <h5 class="card-header">Mettre un commentaire:</h5>
           <div class="card-body">
@@ -99,6 +105,7 @@
             </form>
           </div>
         </div>
+        </form>
 
         <!-- Single Comment -->
         <div class="media mb-4">
