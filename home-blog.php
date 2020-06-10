@@ -4,7 +4,7 @@
 <head>
 
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
 
@@ -15,10 +15,9 @@
 
   <!-- Custom styles for this template -->
   <link href="css/modern-business.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="../css/style.css">
 
 </head>
-
 <style>
 
 
@@ -31,26 +30,25 @@
 }
 
 </style>
-
 <body>
 
   <!-- Navigation -->
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark eole fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="index.html">Éole</a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <a class="navbar-brand" href="/">Éole</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded=" alse" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="faq.html">Login</a>
+            <a class="nav-link" href="/login">Connexion</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="services.html"></a>
+            <a class="nav-link" href=""></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="contact.html">Inscription</a>
+            <a class="nav-link" href="/register">Inscription</a>
           </li>  
         </ul>
       </div>
@@ -69,7 +67,7 @@
       <li class="breadcrumb-item">
         <a href="index.html">Home</a>
       </li>
-      <li class="breadcrumb-item active">Blog</li>
+      <li class="breadcrumb-item active">Blog</li>  
     </ol>
 
     <div class="row">
@@ -77,7 +75,10 @@
       <!-- Blog Entries Column -->
       <div class="col-md-8">
 
-        <!-- <?php foreach ($articles as $article) { ?>
+
+
+
+<?php foreach ($articles as $article) { ?>
 
         <!-- Blog Post -->
         <div class="card mb-4">
@@ -93,26 +94,8 @@
           </div>
         </div>
 
-  <?php } ?>  -->
+  <?php } ?> 
 
-        <!-- Blog Post -->
-        <div class="card mb-4">
-          <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
-          <div class="card-body">
-            <h2 class="card-title">Titre</h2>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
-            <a href="#" class="btn eole txt">En savoir plus &rarr;</a>
-          </div>
-          <div class="card-footer text-muted">
-            Mis en ligne le 1 avril par
-            <a href="#">Tom</a>
-          </div>
-        </div>
-
-        <!-- Blog Post -->
-        
-
-        <!-- Pagination -->
         <ul class="pagination justify-content-center mb-4">
           <li class="page-item">
             <a class="page-link" href="#">&larr; Avant</a>
@@ -158,21 +141,8 @@
                   </li>
                 </ul>
               </div>
-              <!-- <div class="col-lg-6">
-                <ul class="list-unstyled mb-0">
-                  <li>
-                    <a href="#">JavaScript</a>
-                  </li>
-                  <li>
-                    <a href="#">CSS</a>
-                  </li>
-                  <li>
-                    <a href="#">Tutorials</a>
-                  </li>
-                </ul>
-              </div> -->
             </div>
-          </div>
+          </d>
         </div>
 
         <!-- Side Widget -->

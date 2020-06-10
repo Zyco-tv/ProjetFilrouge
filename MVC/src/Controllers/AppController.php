@@ -44,6 +44,7 @@
             public function showComment($id_article)
             {
                 $article = $this->manager->findComment($id_article);
+                require VIEW.'blog/blog-post.php';
             }
             
         
