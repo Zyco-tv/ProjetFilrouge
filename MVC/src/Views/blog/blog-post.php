@@ -89,6 +89,10 @@
 
         <hr>
 
+        <a href="/article/edit/<?php echo $article['id_article']?>">Modifier</a>
+
+        <hr>
+
         
         <!-- Comments Form -->
 

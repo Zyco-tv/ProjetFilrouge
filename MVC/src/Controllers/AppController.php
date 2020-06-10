@@ -103,7 +103,7 @@
             if ($this->validator->errors()) {
                 $_SESSION["errors"] = $this->validator->errors();
                 
-                $this->redirect('/article//edit');
+                $this->redirect('/article/edit');
             } else {
                 $this->manager->updateArticle($id);
                 $this->redirect('/article');
@@ -131,6 +131,10 @@
         public function showCreat()
         {
             require VIEW .'blog/create.php';
+        }
+        public function showArticle()
+        {
+            require VIEW .'blog/edite-blog.php';
         }
 
         public function ajoutCommentaire($id_article)

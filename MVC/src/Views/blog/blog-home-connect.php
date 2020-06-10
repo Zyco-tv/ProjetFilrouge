@@ -35,12 +35,15 @@
   <!-- Navigation -->
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark eole fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="index.html">Éole</a>
+      <a class="navbar-brand" href="/">Éole</a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded=" alse" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/article/create">créer un article</a>
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="/login">Déconnexion</a>
           </li>

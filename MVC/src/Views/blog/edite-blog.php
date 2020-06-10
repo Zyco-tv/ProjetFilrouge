@@ -8,7 +8,7 @@
 </head>
 <body>
 <!-- partial:index.partial.html -->
-<div class="container">  
+<div class="container">
   <form id="contact" action="/article/edit/<?php echo $article['id_article']?>" method="post">
     <h3>Edit Article</h3>
     <h4>Ici tu peux édite ton article</h4>
