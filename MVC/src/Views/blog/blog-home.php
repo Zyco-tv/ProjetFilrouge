@@ -4,7 +4,7 @@
 <head>
 
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
 
@@ -36,7 +36,7 @@
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark eole fixed-top">
     <div class="container">
       <a class="navbar-brand" href="index.html">Éole</a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded=" alse" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -67,7 +67,7 @@
       <li class="breadcrumb-item">
         <a href="index.html">Home</a>
       </li>
-      <li class="breadcrumb-item active">Blog</li>
+      <li class="breadcrumb-item active">Blog</li>  
     </ol>
 
     <div class="row">
@@ -75,33 +75,37 @@
       <!-- Blog Entries Column -->
       <div class="col-md-8">
 
+
+
+
+<?php 
+// require_once '../../../public/dump.php';
+// var_dump($articles);
+foreach ($articles as $article) { 
+  // var_dump($article->id_article); die;
+  ?>
+
         <!-- Blog Post -->
         <div class="card mb-4">
-          <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
+          <img class="card-img-top" src="<?php echo $article->getImg(); ?>" alt="Card image cap">
           <div class="card-body">
-            <h2 class="card-title">Titre</h2>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
-            <a href="blog-post.html" class="btn eole txt">En savoir plus &rarr;</a>
+            <h2 class="card-title"><?php echo $article->getTitle(); ?></h2>
+            <p class="card-text"><?php echo $article->getContent(); ?></p>
+            <a href="/article/<?= $article->id_article?>" class="btn eole txt">Voir plus &rarr;</a>
           </div>
           <div class="card-footer text-muted">
-            Mis en ligne le 5 mai par
+          <p>ajouté le :<?php echo $article->getDate(); ?></p>
             <a href="#">Tom</a>
           </div>
         </div>
 
+<?php } ?> 
+
+
+
+
         <!-- Blog Post -->
-        <div class="card mb-4">
-          <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
-          <div class="card-body">
-            <h2 class="card-title">Titre</h2>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
-            <a href="#" class="btn eole txt">En savoir plus &rarr;</a>
-          </div>
-          <div class="card-footer text-muted">
-            Mis en ligne le 1 avril par
-            <a href="#">Tom</a>
-          </div>
-        </div>
+
 
         <!-- Blog Post -->
         

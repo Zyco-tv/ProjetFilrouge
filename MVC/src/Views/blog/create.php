@@ -154,25 +154,30 @@ fieldset {
   color: #888;
 }
 
+.errors{
+  color: red;
+}
+
 </style>
 
 <body>
 <!-- partial:index.partial.html -->
 <div class="container">  
-  <form id="contact" action="" method="post">
+  <form id="contact" action="/article/creat" method="post">
     <h3>Création d'article</h3>
-    <h4>IVous pouvez rédiger votre article</h4>
+    <h4>Vous pouvez rédiger votre article</h4>
     <fieldset>
-      <input placeholder="Titre" type="text" tabindex="1" required autofocus>
+      <input placeholder="Titre" type="text" tabindex="1" name="title" required autofocus>
+      <!-- <p class="errors"><?php //echo isset($_SESSION["errors"]["titre"]) ? $_SESSION["errors"]["titre"] : ""; ?></p> -->
     </fieldset>
     <fieldset>
-      <input placeholder="liens d'une image" type="text" tabindex="1" required autofocus>
+      <input placeholder="liens d'une image" type="text" tabindex="1" name="img" autofocus>
     </fieldset>
     <fieldset>
-      <textarea placeholder="ton article" tabindex="5" required></textarea>
+      <textarea placeholder="ton article" tabindex="5" name="content" required></textarea>
     </fieldset>
     <fieldset>
-      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Envoyer</button>
+      <button type="submit" name="submit" id="contact-submit" data-submit="...Sending">Envoyer</button>
     </fieldset>
   </form>
 </div>
@@ -180,3 +185,6 @@ fieldset {
   
 </body>
 </html>
+<?php 
+unset($_SESSION["errors"]);
+unset($_SESSION["old"]);

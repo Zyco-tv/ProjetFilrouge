@@ -70,6 +70,9 @@ class Router {
         else if ($this->url == '/article/creat' && $this->method == 'POST') {
             $controllerApp->ajoutArticle();
         }
+        else if (preg_match('#^\/article\/([0-9]+)$#',$this->url, $matches) && $this->method == 'GET'){
+            $controllerApp->show($matches[1]);
+        }
         else if ($this->url == '/article/ajoute/commentaire' && $this->method == 'POST') {
             $controllerApp->ajoutCommentaire();
         }

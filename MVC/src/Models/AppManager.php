@@ -28,7 +28,8 @@ class AppManager {
         $request->execute([
             "title" => $title,
             "img" => $img,
-            "content" => $content
+            "content" => $content,
+            "created_at" => $created_at
         ]);
         $request->setFetchMode(\PDO::FETCH_CLASS, '\App\Models\App');
         return $request->fetchAll();
@@ -74,12 +75,15 @@ class AppManager {
     }
 
     public function addArticle(){
-        $request = $this->pdo->prepare('INSERT INTO article (titre,content) VALUES (:titre,:content)' );
+        $request = $this->pdo->prepare('INSERT INTO article (title,img,content,id_user) VALUES (:title,:img,:content,:id_user)' );
+        //var_dump($request);
         $request->execute([
-            "titre" => $_POST["titre"],
+            "title" => $_POST["title"],
+            "img" => $_POST['img'],
             "content" => $_POST["content"],
-        ]);
-        // return $this->pdo->lastInsertId();
+            "id_user" => $_SESSION["user"]->id_user,
+            ]);
+            return $this->pdo->lastInsertId();
     }
 
     public function addCommentaire(){
@@ -122,6 +126,14 @@ class AppManager {
         $req->execute(array(
             "id" => $id
         ));
+    }
+
+    public function find($id_article){
+        $request = $this->pdo->prepare('SELECT * FROM article WHERE id_article = :id_article');
+        $request->execute([
+            "id_article" => $id_article
+        ]);
+        return $request->fetch();
     }
 
 }

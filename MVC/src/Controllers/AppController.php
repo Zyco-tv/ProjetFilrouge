@@ -22,12 +22,13 @@
                 require VIEW .'HomePage/index.php';
             }
             public function homeArticle() {
+                $articles = $this->manager->allarticle();
                 require VIEW .'blog/blog-home.php';
             }
             
-            public function show($firstname)
+            public function show($id_article)
             {
-                $candidature = $this->manager->find($firstname);
+                $article = $this->manager->find($id_article);
                 require VIEW.'blog/blog-post.php';
             }
         
@@ -96,17 +97,18 @@
         public function ajoutArticle()
         {
             $this->validator->validate([
-                'titre' => ['required'],
-                'contenue' => ['required'],
-                'url' => ['required']
+                'title' => ['required'],
+                'content' => ['required'],
+                // 'url' => ['required']
             ]);
+
             $_SESSION["old"] = $_POST;
             if ($this->validator->errors()) {
                 $_SESSION["errors"] = $this->validator->errors();
-                $this->redirect('/edite');
+                $this->redirect('/article/creat');
             } else {
-                $this->manager->addProjet();
-                $this->redirect('/edite');
+                $this->manager->addArticle();
+                $this->redirect('/article');
             }
         }
 
