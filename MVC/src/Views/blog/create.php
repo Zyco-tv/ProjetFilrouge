@@ -163,7 +163,7 @@ fieldset {
 <body>
 <!-- partial:index.partial.html -->
 <div class="container">  
-  <form id="contact" action="/article/creat" method="post">
+  <form id="contact" action="/article/create" method="post">
     <h3>Création d'article</h3>
     <h4>Vous pouvez rédiger votre article</h4>
     <fieldset>
