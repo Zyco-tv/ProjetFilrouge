@@ -35,9 +35,10 @@ class App {
     public function getContent(){
         return $this->content;
     }
-    
+
     public function getId(){
         return $this->id_user;
     }
+    
 
 }

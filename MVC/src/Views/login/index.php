@@ -1,3 +1,5 @@
+<?php var_dump('jyj'); die;?>
+
 <!DOCTYPE html>
 <html lang="en" >
 <head>

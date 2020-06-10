@@ -86,7 +86,7 @@ $(function() {
                     <thead>
                         <tr>
                             <th>#</th>
-                            <th>Nom</th>						
+                            <th>Nom</th>
                             <th>Date de création</th>
                             <th>Mail</th>
                             <th>Action</th>
@@ -94,8 +94,6 @@ $(function() {
                     </thead>
                     <tbody>
 
-                        
-        
                     <?php foreach ($archives as $archive) { ?>
                         
                         
@@ -103,7 +101,7 @@ $(function() {
                             <td><?php echo $archive->getId();?></td>
                             <td><a href="#"><?php echo $archive->getName();?></a></td>
                             <td><a href="#"><?php echo $archive->getDate();?></a></td>
-                            <td><?php echo $archive->getMail();?></td>                        
+                            <td><?php echo $archive->getMail();?></td>
                             <td>
                                 <a href="/Dashboard/User/<?php echo $archive->getId();?>/edit" class="settings" title="Settings" data-toggle="tooltip"><i class="material-icons">&#xE8B8;</i></a>
                                 <a href="/Dashboard/User/<?php echo $archive->getId();?>/delete" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE5C9;</i></a>

@@ -13,7 +13,7 @@
 		<h1>Bienvenue</h1>
 		
 		<form class="form" method="POST" action="/login">
-			<input type="text" placeholder="Pseudo" value="<?php echo isset($_SESSION["old"]["pseudo"]) ? $_SESSION["old"]["pseudo"] : "";?>" name="pseudo">
+			<input type="text" placeholder="Pseudo" value="<?= $_SESSION["old"]["pseudo"] ?? "";?>" name="pseudo">
 
 			<span  class="red"><?php echo isset($_SESSION["errors"]["pseudo"]) ? $_SESSION["errors"]["pseudo"] : "";?></span>
 

@@ -66,11 +66,11 @@ class AppManager {
 
     public function updateArticle($id)
     {
-        $req = $this->pdo->prepare('UPDATE article SET titre = :titre, content = :content WHERE id = :id');
+        $req = $this->pdo->prepare('UPDATE article SET title = :title, content = :content WHERE id_article = :id_article');
         $req->execute(array(
-            "titre" => $_POST["titre"],
+            "title" => $_POST["title"],
             "content" => $_POST["content"],
-            "id" => $id
+            "id_article" => $id
         ));
     }
 
@@ -124,7 +124,7 @@ class AppManager {
             "id_user" => $id_user
         ));
         $req->setFetchMode(\PDO::FETCH_CLASS, 'App\Models\App');
-         return $req->fetch();
+        return $req->fetch();
     }
     public function deleteArticle($id)
     {
