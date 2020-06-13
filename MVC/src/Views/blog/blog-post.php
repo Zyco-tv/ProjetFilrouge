@@ -85,14 +85,14 @@
         <hr>
 
         <!-- Post Content -->
-        <p class="lead">
+        <p class="lead text-break">
         <?php echo $article['content'] ?>
         </p>
 
         <hr>
 
         <form action="/article/delete/<?php echo $article['id_article']?>" method="post">
-        <button type="submit">supprimer</button>
+        <button type="submit" class="btn btn-danger">Supprimer</button>
         </form>
         <!-- Comments Form -->
 
@@ -118,11 +118,23 @@
           <!-- <img class="d-flex mr-3 rounded-circle" src="" alt=""> -->
           <div class="media-body">
             <h5 class="mt-0"><?php echo $comment->getName();?></h5>
-            <?php echo $comment->getText();?>
+            <div class="border border-light p-3 mb-4">
+            <p class="text-break"><?php echo $comment->getText();?></p>
+            </div>
             </div>
         </div>
         <?php } ?>
       </div>
+      <div class="col-sm-5">
+<div class="panel panel-default">
+<div class="panel-heading">
+<strong>myusername</strong> <span class="text-muted">commented 5 days ago</span>
+</div>
+<div class="panel-body">
+Panel content
+</div><!-- /panel-body -->
+</div><!-- /panel panel-default -->
+</div><!-- /col-sm-5 -->
 
       <!-- Sidebar Widgets Column -->
       <div class="col-md-4">

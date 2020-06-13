@@ -92,7 +92,7 @@ foreach ($articles as $article) {
           </div>
           <div class="card-footer text-muted">
           <p>ajouté le :<?php echo $article->getDate(); ?></p>
-            <a href="#">Tom</a>
+          <a href="#"><?php echo $article->getName(); ?></a>
           </div>
         </div>
 
