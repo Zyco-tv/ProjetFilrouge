@@ -44,6 +44,5 @@ class App {
     public function getText(){
         return $this->text;
     }
-    
 
 }

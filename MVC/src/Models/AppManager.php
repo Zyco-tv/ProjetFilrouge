@@ -8,7 +8,7 @@ class AppManager {
 
     public function __construct()
     {
-        $this->pdo = new \PDO('mysql:host=127.0.0.1;dbname='. DATABASE . ';charset=utf8', USER, PASSWORD);
+        $this->pdo = new \PDO('mysql:host=127.0.0.1:8889;dbname='. DATABASE . ';charset=utf8', USER, PASSWORD);
         $this->pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
     }
 
@@ -128,11 +128,11 @@ class AppManager {
         $req->setFetchMode(\PDO::FETCH_CLASS, 'App\Models\App');
         return $req->fetch();
     }
-    public function deleteArticle($id)
+    public function deleteArticle($id_article)
     {
-        $req = $this->pdo->prepare('DELETE FROM article WHERE id_user = :id_user');
+        $req = $this->pdo->prepare('DELETE FROM article WHERE id_article = :id_article');
         $req->execute(array(
-            "id" => $id
+            "id_article" => $id_article
         ));
     }
 

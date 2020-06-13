@@ -94,11 +94,7 @@ class Router {
         else if (preg_match('#^\/article\/edit\/([0-9]+)$#',$this->url, $matches) && $this->method == 'GET'){
             $controllerApp->showArticle($matches[1]);
         }
-        else if (preg_match('#^\/article\/edit\/([0-9]+)$#',$this->url, $matches) && $this->method == 'POST'){
-
-            $controllerApp->editeArticle($matches[1]);
-        }
-        else if (preg_match('#^\/article\/edit\/delete\/([0-9]+)$#',$this->url, $matches) && $this->method == 'POST'){
+        else if (preg_match('#^\/article\/delete\/([0-9]+)$#',$this->url, $matches) && $this->method == 'POST'){
             $controllerApp->deleteArticle($matches[1]);
         }
         else if (preg_match('#^\/article\/commentaire\/delete\/([0-9]+)$#',$this->url, $matches) && $this->method == 'POST'){
