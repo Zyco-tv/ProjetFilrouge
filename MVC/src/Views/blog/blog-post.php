@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
+  <link rel="shortcut icon" type="image/png" href="https://image.noelshack.com/fichiers/2020/25/1/1592208328-logo.png"/>
 
   <title>Article</title>
 
@@ -125,16 +126,7 @@
         </div>
         <?php } ?>
       </div>
-      <div class="col-sm-5">
-<div class="panel panel-default">
-<div class="panel-heading">
-<strong>myusername</strong> <span class="text-muted">commented 5 days ago</span>
-</div>
-<div class="panel-body">
-Panel content
-</div><!-- /panel-body -->
-</div><!-- /panel panel-default -->
-</div><!-- /col-sm-5 -->
+      <!-- /col-sm-5 -->
 
       <!-- Sidebar Widgets Column -->
       <div class="col-md-4">

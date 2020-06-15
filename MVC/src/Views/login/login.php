@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Login</title>
+  <link rel="shortcut icon" type="image/png" href="https://image.noelshack.com/fichiers/2020/25/1/1592208328-logo.png"/>
   <link rel="stylesheet" href="css/login.css">
 
 </head>

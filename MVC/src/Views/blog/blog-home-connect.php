@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
+  <link rel="shortcut icon" type="image/png" href="https://image.noelshack.com/fichiers/2020/25/1/1592208328-logo.png"/>
 
   <title>Blog Home</title>
 

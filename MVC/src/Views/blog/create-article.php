@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Edite article</title>
   <link rel="stylesheet" href="css/edite.css">
+  <link rel="shortcut icon" type="image/png" href="https://image.noelshack.com/fichiers/2020/25/1/1592208328-logo.png"/>
 
 </head>
 <body>

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User</title>
+    <link rel="shortcut icon" type="image/png" href="https://image.noelshack.com/fichiers/2020/25/1/1592208328-logo.png"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -45,12 +46,6 @@ $(function() {
         <a href="Article" class="nav-link text-dark font-italic">
                   <i class="fa fa-address-card mr-3 eole-text fa-fw"></i>
                   Article
-              </a>
-      </li>
-      <li class="nav-item">
-        <a href="Signalement" class="nav-link text-dark font-italic">
-                  <i class="fa fa-flag mr-3 eole-text fa-fw"></i>
-                  Signale
               </a>
       </li>
       <li class="nav-item">

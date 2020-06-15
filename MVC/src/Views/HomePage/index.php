@@ -11,7 +11,7 @@
     <title>Projet Fils Rouge</title>
 
     <!-- Favico -->
-    <link rel="shortcut icon" type="image/png" href="favicon.ico"/>
+    <link rel="shortcut icon" type="image/png" href="https://image.noelshack.com/fichiers/2020/25/1/1592208328-logo.png"/>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -256,7 +256,7 @@ Notre mission est simple nous devions crée une éolienne pour pouvoir charger n
               <div class="carousel-inner" role="listbox">
                 <div class="carousel-item active text-center p-4">
                   <blockquote class="blockquote text-center">
-                    <p class="mb-0"><i class="fa fa-quote-left"></i> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, necessitatibus! Magnam quis soluta, quae autem, 
+                    <p class="mb-0"><i class="fa fa-quote-left"></i> Du travaille intensif pour de bon résultat des hauts et des bas dans ce projet, mais ce qu'il compte c'est le résultat <i class="fa fa-quote-right"></i>
                     </p>
                     <footer class="blockquote-footer">Tom Litaudon <cite title="Source Title">developpeur</cite></footer>
                     <!-- Client review stars -->
@@ -266,7 +266,7 @@ Notre mission est simple nous devions crée une éolienne pour pouvoir charger n
                 </div>
                 <div class="carousel-item text-center p-4">
                   <blockquote class="blockquote text-center">
-                    <p class="mb-0"><i class="fa fa-quote-left"></i> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim illum accusantium, 
+                    <p class="mb-0"><i class="fa fa-quote-left"></i> Travaille d'équipe constent avec quelque problème puis cela a était régler <i class="fa fa-quote-right"></i>
                     </p>
                     <footer class="blockquote-footer">Alann <cite title="Source Title">developpeur</cite></footer>
                     <!-- Client review stars -->
@@ -276,7 +276,7 @@ Notre mission est simple nous devions crée une éolienne pour pouvoir charger n
                 </div>
                 <div class="carousel-item text-center p-4">
                   <blockquote class="blockquote text-center">
-                    <p class="mb-0"><i class="fa fa-quote-left"></i> Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus distinctio perferendis fuga necessitatibus similique corporis assumenda, 
+                    <p class="mb-0"><i class="fa fa-quote-left"></i> Pas mal de soucis mais beacoup d'avancées et beacoup de coopération <i class="fa fa-quote-left"></i>
                     </p>
                     <footer class="blockquote-footer">Hassen <cite title="Source Title">developpeur</cite></footer>
                     <!-- Client review stars -->
@@ -343,7 +343,7 @@ Notre mission est simple nous devions crée une éolienne pour pouvoir charger n
                 <h4 class="text-uppercase m-0">Email</h4>
                 <hr class="my-4">
                 <div class="small text-black-50">
-                  <a href="#">contact@eoliennes.org</a>
+                  <a href="#">tlitaudon.pro@gmail.com</a>
                 </div>
               </div>
             </div>

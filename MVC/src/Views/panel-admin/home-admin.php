@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <link rel="shortcut icon" type="image/png" href="https://image.noelshack.com/fichiers/2020/25/1/1592208328-logo.png"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -48,12 +49,7 @@ $(function() {
                   Article
               </a>
       </li>
-      <li class="nav-item">
-        <a href="/Dashboard/Signalement" class="nav-link text-dark font-italic">
-                  <i class="fa fa-flag mr-3 eole-text fa-fw"></i>
-                  Signale
-              </a>
-      </li>
+
       <li class="nav-item">
         <a href="/Dashboard/User" class="nav-link text-dark font-italic">
                   <i class="fa fa-user mr-3 eole-text fa-fw"></i>
@@ -68,89 +64,45 @@ $(function() {
   
     <h1>Home panel admin</h1>
           <hr>
-          <h2>Dernier articles</h2>
-        <div class="row">
-        <?php foreach ($archives as $archive) { ?>
-            <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
-                <div class="card-header">Date de l'article</div>
-                <div class="card-body">
-                  <h5 class="card-title"><?php echo $archive->getTitle();?></h5>
-                  <p class="card-text"><?php echo $archive->getContent();?></p>
-                </div>
-              </div>
-             
-            </div>
-          <?php } ?>
-      <hr>
-      <h2>Dernier Signalement</h2>
-        <div class="row">
-            <div class="col-md-12">
-                <table class="table table-striped">
-                    <tr class="table-header">
-                      <th class="cell">ID</th>
-                        <th class="cell">Name</th>
-                        <th class="cell">Username</th>
-                        <th class="cell">Email</th>
-                    </tr>
-                    <tr  class="active">
-                        <td>1</td>
-                        <td>Smith</td>
-                        <td>Smith Mark</td>
-                        <td>mark@gmail.com</td>
+          <div class="gallery" id="gallery">
 
-                    </tr>
-                    <tr class="success">
-                        <td>2</td>
-                        <td>Smith Mark</td>
-                        <td>Smith</td>
-                        <td>marksmith@gmail.com</td>
-                    </tr>
-                    <tr  class="active">
-                        <td>3</td>
-                        <td>Willson</td>
-                        <td>Will</td>
-                        <td>will34@gmail.com</td>
-                    </tr>
-                    <tr class="danger">
-                        <td>4</td>
-                        <td>Jacob</td>
-                        <td>Jacob Thornton</td>
-                        <td>Jacob@gmail.com</td>
-                    </tr>
-                    <tr  class="active">
-                        <td>5</td>
-                        <td>Larry</td>
-                        <td>Larry  Bird</td>
-                        <td>BirdLarry@gmail.com</td>
-                    </tr>
-                </table>
-            </div>
-          </div>
-      <hr>
-      <h2>Dernier User crée</h2>
-        <div class="row">
-            <div class="col-md-12">
-                <table class="table table-striped">
-                
-                    <tr class="table-header">
-                        <th class="cell">ID</th>
-                        <th class="cell">Name</th>
-                        <th class="cell">Mail</th>
-                        <th class="cell">Date</th>
-                    </tr>
-                    
-                    <?php foreach ($utilisateurs as $utilisateur) { ?>
-                    <tr  class="active">
-                        <td><?php echo $archive->getId();?></td>
-                        <td><?php echo $utilisateur->getName();?></td>
-                        <td><?php echo $utilisateur->getMail();?></td>
-                        <td><?php echo $utilisateur->getDate();?></td>
+<!-- Grid column -->
+<div class="mb-3 pics animation all 2">
+  <img class="img-fluid" src="https://positivr.fr/wp-content/uploads/2018/10/energie-eolienne-Une-1024x536.jpg" alt="Card image cap">
+</div>
+<!-- Grid column -->
 
-                    </tr>
-                    <?php } ?>
-                </table>
-            </div>
-          </div>
+<!-- Grid column -->
+<div class="mb-3 pics animation all 1">
+  <img class="img-fluid" src="https://lenergeek.com/wp-content/uploads/2019/07/eolienne-haliade-general-electric.jpeg" alt="Card image cap">
+</div>
+<!-- Grid column -->
+
+<!-- Grid column -->
+<div class="mb-3 pics animation all 1">
+  <img class="img-fluid" src="https://positivr.fr/wp-content/uploads/2019/01/electricite-gratuite-eolienne-crisnee-belgique-une-1024x536.jpg" alt="Card image cap">
+</div>
+<!-- Grid column -->
+
+<!-- Grid column -->
+<div class="mb-3 pics animation all 2">
+  <img class="img-fluid" src="https://www.rts.ch/2017/10/09/12/22/8984763.image?w=1100&h=620" alt="Card image cap">
+</div>
+<!-- Grid column -->
+
+<!-- Grid column -->
+<div class="mb-3 pics animation all 2">
+  <img class="img-fluid" src="https://www.gazettenpdc.fr/wp-content/uploads/2018/12/%C2%A9-Parc-%C3%A9olien-Fruges-2.jpg" alt="Card image cap">
+</div>
+<!-- Grid column -->
+
+<!-- Grid column -->
+<div class="mb-3 pics animation all 1">
+  <img class="img-fluid" src="https://sf2.viepratique.fr/wp-content/uploads/sites/8/2017/02/comment-entretenir-une-eolienne.jpg" alt="Card image cap">
+</div>
+<!-- Grid column -->
+
+</div>
       <hr>
 
 
